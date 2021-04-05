@@ -1,4 +1,4 @@
-// Generated from C:/Users/jeffr/Documents/School/Language/RegexTool/src/grammar\regexTool.g4 by ANTLR 4.9.1
+// Generated from /home/CS/users/oelliott/.linux/cos382/project/QueryBuilder/src/grammar/regexTool.g4 by ANTLR 4.9.1
 package grammar;
 import org.antlr.v4.runtime.tree.ParseTreeVisitor;
 
@@ -22,6 +22,12 @@ public interface regexToolVisitor<T> extends ParseTreeVisitor<T> {
 	 * @return the visitor result
 	 */
 	T visitImports(regexToolParser.ImportsContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link regexToolParser#namespace}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitNamespace(regexToolParser.NamespaceContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link regexToolParser#comment}.
 	 * @param ctx the parse tree
@@ -59,6 +65,18 @@ public interface regexToolVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitBuild_stmt(regexToolParser.Build_stmtContext ctx);
 	/**
+	 * Visit a parse tree produced by {@link regexToolParser#test_stmt}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitTest_stmt(regexToolParser.Test_stmtContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link regexToolParser#func_stmt}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitFunc_stmt(regexToolParser.Func_stmtContext ctx);
+	/**
 	 * Visit a parse tree produced by {@link regexToolParser#term_list}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
@@ -77,15 +95,39 @@ public interface regexToolVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitTerm(regexToolParser.TermContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link regexToolParser#comma_list}.
+	 * Visit a parse tree produced by {@link regexToolParser#variable}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitComma_list(regexToolParser.Comma_listContext ctx);
+	T visitVariable(regexToolParser.VariableContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link regexToolParser#comma_list_tail}.
+	 * Visit a parse tree produced by {@link regexToolParser#param}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitComma_list_tail(regexToolParser.Comma_list_tailContext ctx);
+	T visitParam(regexToolParser.ParamContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link regexToolParser#arg_list}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitArg_list(regexToolParser.Arg_listContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link regexToolParser#arg_list_tail}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitArg_list_tail(regexToolParser.Arg_list_tailContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link regexToolParser#param_list}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitParam_list(regexToolParser.Param_listContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link regexToolParser#param_list_tail}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitParam_list_tail(regexToolParser.Param_list_tailContext ctx);
 }

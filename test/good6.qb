@@ -1,0 +1,6 @@
+import 'test.qb'
+namespace example
+
+label new = test.foo test.bar('a')
+build out = test.prebuilt @GM
+test out @STDIN

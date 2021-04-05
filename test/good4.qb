@@ -1,0 +1,7 @@
+import './test.qb'
+#import the file
+
+label ex = 'ex'
+label mod = '?'
+
+function concat (a,b) = a b

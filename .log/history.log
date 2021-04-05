@@ -1,0 +1,272 @@
+--[ 2021.04.05.13.06.02.710.0 ]--
+NewLogger: QueryBuilder
+Version: 1.4
+--[ 2021.04.05.13.06.02.789.0 ]--
+InitTree:
+/out/production/RegexTool/grammar/regexTool.g4
+/out/production/RegexTool/grammar/regexTool.interp
+/out/production/RegexTool/grammar/regexTool.tokens
+/out/production/RegexTool/grammar/regexToolLexer.class
+/out/production/RegexTool/grammar/regexToolLexer.interp
+/out/production/RegexTool/grammar/regexToolLexer.tokens
+/out/production/RegexTool/grammar/regexToolParser.class
+/out/production/RegexTool/grammar/regexToolVisitor.class
+/out/production/RegexTool/grammar/regexToolListener.class
+/out/production/RegexTool/grammar/regexToolBaseVisitor.class
+/out/production/RegexTool/grammar/regexToolBaseListener.class
+/out/production/RegexTool/grammar/regexToolParser$TermContext.class
+/out/production/RegexTool/grammar/regexToolParser$StartContext.class
+/out/production/RegexTool/grammar/regexToolParser$CommentContext.class
+/out/production/RegexTool/grammar/regexToolParser$ImportsContext.class
+/out/production/RegexTool/grammar/regexToolParser$Func_callContext.class
+/out/production/RegexTool/grammar/regexToolParser$StatementContext.class
+/out/production/RegexTool/grammar/regexToolParser$Term_listContext.class
+/out/production/RegexTool/grammar/regexToolParser$Build_stmtContext.class
+/out/production/RegexTool/grammar/regexToolParser$Comma_listContext.class
+/out/production/RegexTool/grammar/regexToolParser$Label_stmtContext.class
+/out/production/RegexTool/grammar/regexToolParser$StatementsContext.class
+/out/production/RegexTool/grammar/regexToolParser$Capture_stmtContext.class
+/out/production/RegexTool/grammar/regexToolParser$Comma_list_tailContext.class
+/out/production/RegexTool/Test.class
+/src/grammar/regexTool.g4
+/src/grammar/regexTool.interp
+/src/grammar/regexTool.tokens
+/src/grammar/regexToolLexer.java
+/src/grammar/regexToolParser.java
+/src/grammar/regexToolLexer.interp
+/src/grammar/regexToolLexer.tokens
+/src/grammar/regexToolVisitor.java
+/src/grammar/regexToolListener.java
+/src/grammar/regexToolBaseVisitor.java
+/src/grammar/regexToolBaseListener.java
+/src/Test.java
+/.git/info/exclude
+/.git/logs/refs/heads/master
+/.git/logs/refs/remotes/origin/HEAD
+/.git/logs/HEAD
+/.git/refs/heads/master
+/.git/refs/remotes/origin/HEAD
+/.git/hooks/update.sample
+/.git/hooks/pre-push.sample
+/.git/hooks/commit-msg.sample
+/.git/hooks/pre-commit.sample
+/.git/hooks/pre-rebase.sample
+/.git/hooks/post-update.sample
+/.git/hooks/pre-receive.sample
+/.git/hooks/applypatch-msg.sample
+/.git/hooks/pre-applypatch.sample
+/.git/hooks/pre-merge-commit.sample
+/.git/hooks/fsmonitor-watchman.sample
+/.git/hooks/prepare-commit-msg.sample
+/.git/objects/07/6d334d0a4035957040c810b5a8630cc3763afb
+/.git/objects/08/a6400d7b14f98b69b7bde30b7c9fdb8cfe3a4f
+/.git/objects/09/a9c2d97634bb0510206f6ecdb85fc2dd52d529
+/.git/objects/0a/bac162b0dfb6f5448111228a8699751c065b9c
+/.git/objects/0b/34accb972c814d05576d35654167903f5b3a7f
+/.git/objects/14/1fc65906f790347be8a45e1056a6f1ff19ae5d
+/.git/objects/15/f55c9db690ccf9789ec140ee8f2f181db2193f
+/.git/objects/16/e60dbe0dd29053c6ef29715fc4a276b45d91ea
+/.git/objects/21/cb9b8e465a236168b9d4af2bc3922d5aadccf8
+/.git/objects/23/e294df8fc7cab170aab915d799c81d24217fd3
+/.git/objects/23/ee9a01db719eb63d556465464f5c6ad4497829
+/.git/objects/26/d33521af10bcc7fd8cea344038eaaeb78d0ef5
+/.git/objects/38/4042fba8ea3ab86f55bf76f691086b24341016
+/.git/objects/3a/60f9d19ad8a0171d5b77efb41aeb58d3aec4eb
+/.git/objects/41/8ac839f471d53ea1fc510d7e42dc24dfa84452
+/.git/objects/44/a9cc49c5ec3e8b533ce89baf53cb5f643dd913
+/.git/objects/47/780e8800dfe90881fe93c839ccb010a35bc0e3
+/.git/objects/4c/aa35fed2f73ed1b4f81330d65fa0fec2544821
+/.git/objects/51/71753f10d5125840f1b293446a85de0f2869af
+/.git/objects/52/1501c4e89df2edd9c674a7a53e2fb0a5c424d4
+/.git/objects/57/404add8aa726c1a1b1c325b1357fd4e0c07cf4
+/.git/objects/57/64e6cfb8618676a0a69f61fadb37f83a3671ad
+/.git/objects/71/b5e74d69fafe1b0147be558ed8e4c83809864e
+/.git/objects/79/aebc272d9ddc0635229c9afd6b9e9f9878cf25
+/.git/objects/83/06bdf87c47c65fdf9eeae6718bb87a81dc3d0b
+/.git/objects/8c/df4baeeb05f32a68e806ffd8a787f6e3ad9df8
+/.git/objects/8d/742e4959253fcb09853055715b82f13ab8376b
+/.git/objects/8d/7a937cc9175a51b218d918acc4f5742ea2211d
+/.git/objects/93/1d1344233efae4f04fb7496ce05b6158045240
+/.git/objects/96/1e084562ba8e8216e439c6c4f2af1e7507b9e3
+/.git/objects/a5/3009e62f28984aa7c62704348886f7efa5deab
+/.git/objects/a5/62e6684c37f11948119b24a1b5f8b59d16c85d
+/.git/objects/a5/ebd475ab9177e69045517f300d0f97b0f9c8f4
+/.git/objects/a8/415f1690021314d46f4677356ad57fa3e9b486
+/.git/objects/b6/4a874b22dc4c89e5ca41f16863556d145a86b9
+/.git/objects/c3/0969db48acfa344961b72320f0fe19443881bb
+/.git/objects/cd/77145916ca02a15c1c34918d162936dfa572df
+/.git/objects/d2/9186d54148a1a385fc9c35e99cb20d94d708ea
+/.git/objects/d6/88bdf090f33efb9eee4ba112e63c3180ab968f
+/.git/objects/d7/baaf98ee9d27a12ce91210d9408326fb133d18
+/.git/objects/da/827f99efd2c8454b77933c7592a53161145a3f
+/.git/objects/db/fc5f3c5d22672729922399f79b2a43eb686b89
+/.git/objects/f4/2ecb2c57953aa1b5c8b780724be65b136fd1b9
+/.git/objects/f4/9d68fc2735b83f3773124797b8d3c2a8651dc6
+/.git/objects/f5/84d821afe63c1ec493bec249ef475288861de8
+/.git/objects/fa/d924d888b762dbdb579595ffe4287a8dc6f6fc
+/.git/objects/fb/e2ae79e1297ba0cbde91fc8eb8d89b13ef208f
+/.git/objects/fe/8712fd06e154dee3d85e84b0e947df98451add
+/.git/objects/ff/fb2c26a80bd3b6c82a1e8df60b29838d786f7d
+/.git/HEAD
+/.git/index
+/.git/config
+/.git/description
+/.git/packed-refs
+/test/test1.txt
+/test/test2.txt
+/.idea/libraries/antlr_runtime_4_9_1.xml
+/.idea/misc.xml
+/.idea/.gitignore
+/.idea/modules.xml
+/RegexTool.iml
+
+--[ 2021.04.05.13.06.03.603.0 ]--
+UpdateTree (AD): 1 0
++ /.log/history.log
+
+--[ 2021.04.05.13.08.02.877.0 ]--
+UpdateTree (AD): 1 0
++ /.idea/vcs.xml
+
+--[ 2021.04.05.13.12.41.346.0 ]--
+UpdateTree (AD): 1 0
++ /.idea/workspace.xml
+
+--[ 2021.04.05.13.12.56.484.0 ]--
+UpdateTree (AD): 1 0
++ /.git/objects/35/eb1ddfbbc029bcab630581847471d7f238ec53
+
+--[ 2021.04.05.13.31.40.116.0 ]--
+CompilationStatus (AEW): 0 0 2
+[Ljava.lang.String;@4fae027b
+--[ 2021.04.05.13.31.47.930.0 ]--
+UpdateTree (AD): 2 0
++ /out/production/RegexTool/grammar/regexToolParser$Test_stmtContext.class
++ /out/production/RegexTool/grammar/regexToolParser$Namespace_stmtContext.class
+
+--[ 2021.04.05.13.32.19.439.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.05.13.32.30.911.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.05.13.33.54.302.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.05.13.34.17.649.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.05.13.34.28.789.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.05.13.35.04.416.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.05.13.37.42.696.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.05.13.38.42.354.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.05.13.39.52.636.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.05.13.40.45.381.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.05.13.42.12.160.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.05.13.42.25.922.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.05.13.43.41.973.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.05.13.43.54.845.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.05.13.46.24.503.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.05.13.48.07.000.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.05.13.48.24.475.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.05.13.48.46.436.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.05.13.49.07.348.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.05.13.49.45.308.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.05.13.50.04.656.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.05.13.50.27.139.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.05.13.51.42.101.0 ]--
+UpdateTree (AD): 0 1
+- /out/production/RegexTool/grammar/regexToolParser$Namespace_stmtContext.class
+
+--[ 2021.04.05.13.51.42.105.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.05.13.52.08.624.0 ]--
+UpdateTree (AD): 1 0
++ /out/production/RegexTool/grammar/regexToolParser$NamespaceContext.class
+
+--[ 2021.04.05.13.52.37.291.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.05.13.52.58.114.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.05.13.53.22.628.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.05.13.55.26.205.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.05.13.55.36.563.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.05.14.02.34.181.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.05.14.02.43.352.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.05.14.02.52.729.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.05.14.03.24.490.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.05.14.04.20.120.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.05.14.06.23.813.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.05.14.07.30.411.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.05.14.15.18.536.0 ]--
+UpdateTree (AD): 0 2
+- /out/production/RegexTool/grammar/regexToolParser$Comma_listContext.class
+- /out/production/RegexTool/grammar/regexToolParser$Comma_list_tailContext.class
+
+--[ 2021.04.05.14.15.18.540.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.05.14.16.41.201.0 ]--
+UpdateTree (AD): 6 0
++ /out/production/RegexTool/grammar/regexToolParser$ParamContext.class
++ /out/production/RegexTool/grammar/regexToolParser$Arg_listContext.class
++ /out/production/RegexTool/grammar/regexToolParser$Func_stmtContext.class
++ /out/production/RegexTool/grammar/regexToolParser$Param_listContext.class
++ /out/production/RegexTool/grammar/regexToolParser$Arg_list_tailContext.class
++ /out/production/RegexTool/grammar/regexToolParser$Param_list_tailContext.class
+
+--[ 2021.04.05.14.18.05.238.0 ]--
+UpdateTree (AD): 1 0
++ /test/good1.qb
+
+--[ 2021.04.05.14.18.14.690.0 ]--
+UpdateTree (AD): 1 0
++ /test/good2.qb
+
+--[ 2021.04.05.14.18.37.990.0 ]--
+UpdateTree (AD): 1 0
++ /test/good3.qb
+
+--[ 2021.04.05.14.18.59.570.0 ]--
+UpdateTree (AD): 1 0
++ /test/good4.qb
+
+--[ 2021.04.05.14.20.37.325.0 ]--
+UpdateTree (AD): 1 0
++ /test/good5.qb
+
+--[ 2021.04.05.14.21.03.607.0 ]--
+UpdateTree (AD): 1 0
++ /test/good6.qb
+
+--[ 2021.04.05.14.26.02.199.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.05.14.26.13.388.0 ]--
+UpdateTree (AD): 1 0
++ /out/production/RegexTool/grammar/regexToolParser$VariableContext.class
+
+--[ 2021.04.05.14.37.45.604.0 ]--
+CompilationStatus (AEW): 0 0 0

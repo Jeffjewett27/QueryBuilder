@@ -1,8 +1,16 @@
 import 'this is the name of a file.txt'
-
+# test comment
 import 'f2'
 
+#namespace nstest
+
 label l1 = fast '?' func() f2(a) f3(a,b)
-label l2 =
+label l2 = term
 
 label l3 = f(g(),b)
+
+function func(a, b) = a b
+
+build out = l3 @MOD_G
+test out @STDIN
+test out 'inputfile.txt'

@@ -1,4 +1,4 @@
-// Generated from C:/Users/jeffr/Documents/School/Language/RegexTool/src/grammar\regexTool.g4 by ANTLR 4.9.1
+// Generated from /home/CS/users/oelliott/.linux/cos382/project/QueryBuilder/src/grammar/regexTool.g4 by ANTLR 4.9.1
 package grammar;
 
 import org.antlr.v4.runtime.ParserRuleContext;
@@ -35,6 +35,18 @@ public class regexToolBaseListener implements regexToolListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitImports(regexToolParser.ImportsContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterNamespace(regexToolParser.NamespaceContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitNamespace(regexToolParser.NamespaceContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -112,6 +124,30 @@ public class regexToolBaseListener implements regexToolListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterTest_stmt(regexToolParser.Test_stmtContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitTest_stmt(regexToolParser.Test_stmtContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterFunc_stmt(regexToolParser.Func_stmtContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitFunc_stmt(regexToolParser.Func_stmtContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterTerm_list(regexToolParser.Term_listContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -148,25 +184,73 @@ public class regexToolBaseListener implements regexToolListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterComma_list(regexToolParser.Comma_listContext ctx) { }
+	@Override public void enterVariable(regexToolParser.VariableContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitComma_list(regexToolParser.Comma_listContext ctx) { }
+	@Override public void exitVariable(regexToolParser.VariableContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterComma_list_tail(regexToolParser.Comma_list_tailContext ctx) { }
+	@Override public void enterParam(regexToolParser.ParamContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitComma_list_tail(regexToolParser.Comma_list_tailContext ctx) { }
+	@Override public void exitParam(regexToolParser.ParamContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterArg_list(regexToolParser.Arg_listContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitArg_list(regexToolParser.Arg_listContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterArg_list_tail(regexToolParser.Arg_list_tailContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitArg_list_tail(regexToolParser.Arg_list_tailContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterParam_list(regexToolParser.Param_listContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitParam_list(regexToolParser.Param_listContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterParam_list_tail(regexToolParser.Param_list_tailContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitParam_list_tail(regexToolParser.Param_list_tailContext ctx) { }
 
 	/**
 	 * {@inheritDoc}
