@@ -1,0 +1,8 @@
+import 'this is the name of a file.txt'
+
+import 'f2'
+
+label l1 = fast '?' func() f2(a) f3(a,b)
+label l2 =
+
+label l3 = f(g(),b)
