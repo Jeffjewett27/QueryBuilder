@@ -1,0 +1,4 @@
+namespace bad2
+import bad1
+
+label namespaceCameFirst = 'wrong'

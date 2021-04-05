@@ -1,0 +1,5 @@
+namespace bad3
+
+label nothingWrongSoFar = 'ok'
+
+build forgotAnEquals nothingWrongSoFar
