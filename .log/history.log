@@ -270,3 +270,112 @@ UpdateTree (AD): 1 0
 
 --[ 2021.04.05.14.37.45.604.0 ]--
 CompilationStatus (AEW): 0 0 0
+--[ 2021.04.05.14.41.17.871.0 ]--
+UpdateTree (AD): 61 0
++ /.git/logs/refs/remotes/origin/master
++ /.git/refs/remotes/origin/master
++ /.git/objects/13/023b2c1e877a0e45b8568c7a9879164afcb5c0
++ /.git/objects/17/6b232d2d305225b2b4be89b364c063a15fb5e2
++ /.git/objects/1d/9ac87882e9b3160bca6ac40a86547eb8da64ea
++ /.git/objects/1e/b44eb17c6139aa3f4f2f9464cdae17dfaef50e
++ /.git/objects/20/2a9ff7dbd5e9995abb0c5986cbcb8442344803
++ /.git/objects/21/2c264f79bd72e57477f149930f8d7d8a12b498
++ /.git/objects/27/9ef35f921424e154cd0cd0e02ac5a6bc2be86a
++ /.git/objects/2d/bd69c724224e7174d782974efef1de55b21b62
++ /.git/objects/2e/96bb941c9e63ebb7c0e19db10c0b061211c1e7
++ /.git/objects/34/b21bd0dfb4d1b47e7cdfe22f29323fd3b513d1
++ /.git/objects/36/17880a177b0e91e08cde405c257133f21b5aa6
++ /.git/objects/3a/9233724fae4e8d2c5b2cdad2c5a62c54ba9852
++ /.git/objects/3c/371e3065df9edae856a68d288f0c3d79dd576b
++ /.git/objects/3e/eeea9ca5f0481b16fa0eae590b3e38b70d77e6
++ /.git/objects/40/7d8acfa311fb47bc531168bc9f0ad3c387b36e
++ /.git/objects/45/fc23b527650e951d9124ab0a181095b0bdbe8d
++ /.git/objects/47/029dae0fbaeea06d46446bb7e077fbc95d92db
++ /.git/objects/47/6dc71dc2c26fd4490b27764ddd21178cd8957a
++ /.git/objects/49/027ba4fb1f1327fd156089a21b885607ead543
++ /.git/objects/4f/ef43857a2a2acab44d5412f1313ec42fc03fc6
++ /.git/objects/50/95aa60b05b538e79d1bd5f007810dea1a4d86c
++ /.git/objects/57/b30cda900445e47554737f76cd5ccb4b272f69
++ /.git/objects/58/db23f6a97850e3a5ab9cc0a69e89c6e2d81630
++ /.git/objects/5b/69b4eb4eba136cb95df2191140ae9c8cc83596
++ /.git/objects/69/52b74f5f81090620e9b18a10d1e7b5250f40ad
++ /.git/objects/6a/9a24448ab37f256052c8c5b7d21a14435d43e4
++ /.git/objects/6d/62c8acfe005ee872b9dd7c04c52a8fb84f3cbb
++ /.git/objects/6f/8292e8db3191d6e6caa9aef1dd7e23b64ae52d
++ /.git/objects/6f/b05381914f01f4bdfa05b8adc3913b5daec088
++ /.git/objects/70/5e3c7b9155ee3354ab4ae422036e2da1b0fae7
++ /.git/objects/79/62ed1e0b391b5d4c9796c0ebb6acdb1f27067b
++ /.git/objects/7b/2cd3af78478369a96c53b425fbe8150b7e468a
++ /.git/objects/7b/bd8f1f11244bee12304f89acf9d12a2b12595e
++ /.git/objects/8e/3eb9f05f039b6cae21dd187bf26d3c953f2ba4
++ /.git/objects/8f/31aaf77db36f20a11b9f721839503f87a4bab7
++ /.git/objects/92/4ca6f27479bd05492e70dae92c15c54d01084d
++ /.git/objects/96/33c9d79128d882862922177824338dc107396a
++ /.git/objects/9a/ad396b9799c09fe031224f5af9376459b323f7
++ /.git/objects/9d/7b11f9f37feed4aef1ed69a1522dd19da01439
++ /.git/objects/a3/52a5c51fd249ee1c5ccbb26a64507ab034e922
++ /.git/objects/a4/8f46fa3893ad4806a69bdef5b77dedd8aa96a4
++ /.git/objects/a8/85e4d234f59139bd282be6f48bb838b88f22bc
++ /.git/objects/a9/600ff319bb36f3f9fe31a77bb61f61ddbf6537
++ /.git/objects/aa/4f087e6f5a6354d7211ae55398b9fc6ad04018
++ /.git/objects/aa/b23a8ca7e0d23c80ef48d781c36071635a5e7d
++ /.git/objects/b7/56a7b703145cba11924070cd24e44bfa70b042
++ /.git/objects/b8/1e6f2d91f993ee1b189bf280e02e15de82b052
++ /.git/objects/c0/1ad191735080744d0edaf20a53ab94a9581a0a
++ /.git/objects/cb/1ffc563b5eb0cb1078fc46a9748b9e86f902f1
++ /.git/objects/d7/bf1cd9ab1d40eeee0111203ad21da76cc2e00d
++ /.git/objects/e0/f1690f1c846f54d0585d39516fc38362887116
++ /.git/objects/e1/f13a1e229552234d748fe3709652dab26de626
++ /.git/objects/e6/9de29bb2d1d6434b8b29ae775ad8c2e48c5391
++ /.git/objects/e6/d03e7501a7785e9c1a37e914caa7086857691e
++ /.git/objects/ec/da5ff2de24e15c2ae66015e7ca821df5b39a90
++ /.git/objects/f7/dbbeec58291e1a509e97f385296c2c105d085e
++ /.git/objects/fb/7e821faff6c4545fb7618d55961bfd47371aa1
++ /.git/COMMIT_EDITMSG
++ /test/bad1.qb
+
+--[ 2021.04.05.14.42.13.587.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.05.14.43.06.543.0 ]--
+UpdateTree (AD): 1 0
++ /test/bad2.qb
+
+--[ 2021.04.05.14.45.16.009.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.05.14.50.18.121.0 ]--
+UpdateTree (AD): 1 0
++ /test/bad3.qb
+
+--[ 2021.04.05.14.50.41.123.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.05.14.53.44.681.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.05.15.03.05.483.0 ]--
+UpdateTree (AD): 1 0
++ /test/bad4.qb
+
+--[ 2021.04.05.15.04.33.082.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.05.15.12.23.783.0 ]--
+UpdateTree (AD): 7 0
++ /.git/objects/0f/43eee47cfaf3d6061635c28f6c7ac8773bb7b4
++ /.git/objects/13/108d66264b2136aed8fed174f085d3f7dc7293
++ /.git/objects/3e/9db0b14ca7e76eebb436092a4f6b1e4bf5f0e0
++ /.git/objects/89/1bab16c9191f63a1a9fcd2b7565a29d229fffb
++ /.git/objects/91/bd0bf351a2e29ec7be1c0b937da429048ee5da
++ /.git/objects/93/689db25d1b154cdc3f831dcadaf70db4bbd6be
++ /.git/objects/eb/d043239ea5df012f286f093c91122ef0733d37
+
+--[ 2021.04.05.20.22.10.008.0 ]--
+UpdateTree (AD): 4 0
++ /.git/objects/80/10e30c1d451603705cfff60c7caac0be0f702d
++ /.git/objects/f4/98197ba16b74a243a1d4ae79e18601fa04eaed
++ /.git/ORIG_HEAD
++ /.git/FETCH_HEAD
+
+--[ 2021.04.05.20.36.23.088.0 ]--
+UpdateTree (AD): 3 0
++ /.git/objects/c0/44115275bc1d4c719650cbcadfcddd8f106f5d
++ /asset1.png
++ /readme.html
+

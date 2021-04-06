@@ -1,0 +1,268 @@
+
+<meta charset="utf-8" lang="en">
+
+                **Project: QueryBuilder**
+
+This is the report of our progress so far in developing a domain specific language known as QueryBuilder.
+
+
+<!--
+
+General
+========
+
+For each of your team's implementations, explain the following (where appropriate and applicable):
+
+- details on calling conventions, input and output data formats, limitations, bugs, and special features.
+- negative aspects of your program (limitations, known bugs)
+- positive aspects (extensions, special features)
+- describe your choice of modularization (abstractions), data structures, and algorithms
+- explain anything you did that is likely to be different from what other students may have done
+- justify any design decisions for which the rationale isn't immediately clear
+
+Feel free to modify the structure of this `readme.html` file to fit the current assignment and to fit how you wish to present your findings.
+
+
+Submission
+-----------
+
+
+Create a zip file that contains all of your code, this `readme.html` document, and any additional files of evidence (ex: screenshots).
+
+Use folders to divide up the subparts of your submission.
+For example, your zip file could look like the following:
+
+~~~~
+readme.html
+ada/
+    primepartitions.adb
+    screenshot.png
+go/
+    primepartitions.go
+    screenshot.png
+haskell/
+    primepartitions.hs
+    screenshot.png
+prolog/
+    primepartitions.pl
+    screenshot.png
+python/
+    primepartitions.py
+    screenshot.png
+~~~~
+-->
+
+
+Authors
+=============
+
+<!-- Note: wrapping table in div.noheader will hide the table's header -->
+<!-- Note: wrapping table in div.firstcol will style the first column different from other columns -->
+<div class="noheader firstcol">
+                  |             
+------------------|-------------
+names             | Owen Elliott / Jeff Jewett
+computer + OS     | cse21703 (Ubuntu)
+time to complete  | 6 hours
+</div>
+
+
+Introduction
+================
+
+QueryBuilder is a DSL for composing and executing regex statements
+
+regex is confusing, the DSL seeks to simplify it and allow for testing
+
+useful to write complex regex queries quickly
+
+solves the problem of capture groups not being very robust
+
+Features
+================
+
+labels for repeated inputs
+
+simplified common expressions
+
+distinguish between capture groups (format output accordingly)
+
+compile to regex
+
+template functions
+
+test regex against input data (STDIN | INPUT FILE)
+
+Examples
+================
+
+File 1: example.qb
+
+```
+namespace example
+
+label capture firstname = "[a-zA-z]+"
+label capture[] lastname = "[a-zA-z]+"
+label fullname = firstname "\s" lastname
+
+function fencepost(x,y) = x "(?>" y x ")*"
+label namelist = fencepost(fullname, ",\s")
+
+build [flags] output = namelist  #build regex form
+test output @STDIN
+test output 'inputfile.txt'
+```
+
+File 2: test.qb
+
+```
+import previousfile.qb
+namespace test
+
+label capture[] email = "[\w\.]*@\w*.\w*"
+label emaillist = example.fencepost(email, ",\s")
+build output = emaillist
+```
+
+Process
+================
+
+namelist
+
+fencepost(fullname,",\s")
+
+fullname(,",\s"fullname)*
+
+firstname"\s"lastname"(?>,\s"firstname"\s"lastname)*
+
+(firstname)"\s"(lastname)"(?>,\s"(firstname)"\s"(lastname))*
+
+([a-zA-z]+)\s([a-zA-z]+)(?>,\s([a-zA-z]+)\s([a-zA-z]+))*
+
+Test
+================
+
+input 1
+--------------------------------
+
+Joe Smith, Debra Jones
+
+Jeff Jewett, Owen Elliott
+
+output 1
+--------------------------------
+
+Match 1: Joe Smith, Debra Jones
+
+Group 1: Joe
+
+Group lastname1: Smith
+
+Group 3: Debra
+
+Group lastname2: Jones
+
+
+Match 2: Jeff Jewett, Owen Elliott
+
+Match 1: Joe Smith, Debra Jones
+
+Group 1: Jeff
+
+Group lastname1: Jewett
+
+Group 3: Owen
+
+Group lastname2: Elliott
+
+
+input 2
+--------------------------------
+
+owenelliott64@gmail.com, jeffiscool@example.com
+
+output 2
+--------------------------------
+
+Match 1: owenelliott64@gmail.com, jeffiscool@example.com
+
+Group email1: owenelliott64@gmail.com
+
+Group email2: jeffiscool@example.com
+
+
+Grammar
+================
+
+import: appends following file to the top of the script, generates symbol table (like a #include)
+
+label: a named pattern of regex literals or function outputs that can be referenced later, added to the symbol table
+
+capture: a modifier to a label that indicates that it is a capture group (can also name capture groups in a list)
+
+function: a template pattern with placeholder values
+
+build: translates the following pattern into proper regex. can be modified with flags.
+
+test: given a built query and a target, search the target using the given query.
+
+namespace: delcare the title of this file's labels / functions, if included in another file reference with namespace.label
+
+
+Parser
+================
+
+QueryBuilder files are recognized as valid input using the ANTLR grammar system. We ran tests to see if the parser could tell the difference between valid and invalid syntax, and it passed all ten tests.
+All ten tests used are in the /test/ subdirectory.
+
+![Parse Tree](asset1.png)
+
+
+
+
+<!--   Feel free to modify the following to fit a theme of your choosing   -->
+<link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet"> <!-- a sans-serif font -->
+<style>  /* A TAYLOR-INSPIRED THEME */
+    body {font-family:'Open Sans',sans-serif;}
+    .md a:link, .md a:visited {color:hsl(252,23.0%,44.3%); font-family:'Open Sans',sans-serif;}
+    .md table.table th {background-color:hsl(252,23.0%,44.3%);}
+    .md .noheader th {display:none;}
+    .md .firstcol td:first-child {white-space:pre;color:white;vertical-align:top;font-weight:bold;border-color:black;background:hsl(252,23.0%,54.3%);}
+    .md .firstcol tr:nth-child(even) td:first-child {background:hsl(252,23.0%,44.3%);}
+</style>
+
+
+<!-- ****************************** -->
+<!--    Leave the content below     -->
+<!-- ****************************** -->
+
+<!-- The script and style below are added for clarity and to workaround a bug -->
+<script>
+    // this is a hack to workaround a bug in Markdeep+Mathjax, where
+    // `&#36;`` is automatically converted to `\(`` and `\)`` too soon.
+    // the following code will replace the innerHTML of all elements
+    // with class "dollar" with a dollar sign.
+    setTimeout(function() {
+        var dollars = document.getElementsByClassName('dollar');
+        for(var i = 0; i < dollars.length; i++) {
+            dollars[i].innerHTML = '&#' + '36;'; // split to prevent conversion to $
+        }
+    }, 1000);
+</script>
+<style>
+    /* adding some styling to <code> tags (but not <pre><code> coding blocks!) */
+    :not(pre) > code {
+        background-color: rgba(0,0,0,0.05);
+        outline: 1px solid rgba(0,0,0,0.15);
+        margin-left: 0.25em;
+        margin-right: 0.25em;
+    }
+    /* fixes table of contents of medium-length document from looking weird if admonitions are behind */
+    .md div.mediumTOC { background: white; }
+    .md div.admonition { position: initial !important; }
+</style>
+
+<!--   Leave the following Markdeep formatting code, as this will format your text above to look nice in a wed browser   -->
+<style class="fallback">body{visibility:hidden;white-space:pre;font-family:monospace}</style>
+<script src="https://casual-effects.com/markdeep/latest/markdeep.min.js"></script>
+<script>window.alreadyProcessedMarkdeep||(document.body.style.visibility="visible");</script>
