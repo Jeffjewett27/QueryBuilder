@@ -217,6 +217,57 @@ All ten tests used are in the /test/ subdirectory.
 
 ![Parse Tree](asset1.png)
 
+Here are a few sample tests for valid input
+
+test6
+
+```
+import './test.qb'
+#import the file
+
+label ex = 'ex'
+label mod = '?'
+
+function concat (a,b) = a b
+#the parser accepts this input
+```
+
+test5
+
+```
+import 'test.qb'
+namespace example
+
+label new = test.foo test.bar('a')
+build out = test.prebuilt @GM
+test out @STDIN
+#the parser accepts this input
+```
+
+Here are a few sample tests for invalid input
+
+test 3
+
+```
+namespace bad3
+
+label nothingWrongSoFar = 'ok'
+
+build forgotAnEquals nothingWrongSoFar
+#the parser rejects this input
+```
+
+test 4
+
+```
+namespace bad4
+
+label missingQuotes = $hello^
+
+build output = missingQuotes
+#the parser rejects this input
+```
+
 
 
 
