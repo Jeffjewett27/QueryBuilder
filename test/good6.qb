@@ -1,6 +1,6 @@
 import 'test.qb'
 namespace example
 
-label new = test.foo test.bar('a')
+label new = test.foo test.bar('a', 'b', func('c','d'))
 build out = test.prebuilt @GM
 test out @STDIN

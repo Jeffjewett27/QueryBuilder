@@ -172,25 +172,61 @@ public class regexToolBaseListener implements regexToolListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterTerm(regexToolParser.TermContext ctx) { }
+	@Override public void enterFuncTerm(regexToolParser.FuncTermContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitTerm(regexToolParser.TermContext ctx) { }
+	@Override public void exitFuncTerm(regexToolParser.FuncTermContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterVariable(regexToolParser.VariableContext ctx) { }
+	@Override public void enterQuoteTerm(regexToolParser.QuoteTermContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitVariable(regexToolParser.VariableContext ctx) { }
+	@Override public void exitQuoteTerm(regexToolParser.QuoteTermContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterVarTerm(regexToolParser.VarTermContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitVarTerm(regexToolParser.VarTermContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterVarIdent(regexToolParser.VarIdentContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitVarIdent(regexToolParser.VarIdentContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterVarNSIdent(regexToolParser.VarNSIdentContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitVarNSIdent(regexToolParser.VarNSIdentContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -208,25 +244,49 @@ public class regexToolBaseListener implements regexToolListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterArg_list(regexToolParser.Arg_listContext ctx) { }
+	@Override public void enterArgHead(regexToolParser.ArgHeadContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitArg_list(regexToolParser.Arg_listContext ctx) { }
+	@Override public void exitArgHead(regexToolParser.ArgHeadContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterArg_list_tail(regexToolParser.Arg_list_tailContext ctx) { }
+	@Override public void enterArgEmpty(regexToolParser.ArgEmptyContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitArg_list_tail(regexToolParser.Arg_list_tailContext ctx) { }
+	@Override public void exitArgEmpty(regexToolParser.ArgEmptyContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterArgListTail(regexToolParser.ArgListTailContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitArgListTail(regexToolParser.ArgListTailContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterArgListDone(regexToolParser.ArgListDoneContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitArgListDone(regexToolParser.ArgListDoneContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *

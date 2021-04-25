@@ -89,17 +89,40 @@ public interface regexToolVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitFunc_call(regexToolParser.Func_callContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link regexToolParser#term}.
+	 * Visit a parse tree produced by the {@code funcTerm}
+	 * labeled alternative in {@link regexToolParser#term}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitTerm(regexToolParser.TermContext ctx);
+	T visitFuncTerm(regexToolParser.FuncTermContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link regexToolParser#variable}.
+	 * Visit a parse tree produced by the {@code quoteTerm}
+	 * labeled alternative in {@link regexToolParser#term}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitVariable(regexToolParser.VariableContext ctx);
+	T visitQuoteTerm(regexToolParser.QuoteTermContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code varTerm}
+	 * labeled alternative in {@link regexToolParser#term}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitVarTerm(regexToolParser.VarTermContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code varIdent}
+	 * labeled alternative in {@link regexToolParser#variable}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitVarIdent(regexToolParser.VarIdentContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code varNSIdent}
+	 * labeled alternative in {@link regexToolParser#variable}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitVarNSIdent(regexToolParser.VarNSIdentContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link regexToolParser#param}.
 	 * @param ctx the parse tree
@@ -107,17 +130,33 @@ public interface regexToolVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitParam(regexToolParser.ParamContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link regexToolParser#arg_list}.
+	 * Visit a parse tree produced by the {@code argHead}
+	 * labeled alternative in {@link regexToolParser#arg_list}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitArg_list(regexToolParser.Arg_listContext ctx);
+	T visitArgHead(regexToolParser.ArgHeadContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link regexToolParser#arg_list_tail}.
+	 * Visit a parse tree produced by the {@code argEmpty}
+	 * labeled alternative in {@link regexToolParser#arg_list}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitArg_list_tail(regexToolParser.Arg_list_tailContext ctx);
+	T visitArgEmpty(regexToolParser.ArgEmptyContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code argListTail}
+	 * labeled alternative in {@link regexToolParser#arg_list_tail}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitArgListTail(regexToolParser.ArgListTailContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code argListDone}
+	 * labeled alternative in {@link regexToolParser#arg_list_tail}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitArgListDone(regexToolParser.ArgListDoneContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link regexToolParser#param_list}.
 	 * @param ctx the parse tree

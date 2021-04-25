@@ -22,5 +22,7 @@ public class Test {
         //System.out.println(parser.getSerializedATN());
 
 
+        //Assuming valid input, begin analysis
+
     };
 }

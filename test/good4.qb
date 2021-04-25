@@ -2,6 +2,6 @@ import './test.qb'
 #import the file
 
 label ex = 'ex'
-label mod = '?'
+label concat = '?'
 
 function concat (a,b) = a b

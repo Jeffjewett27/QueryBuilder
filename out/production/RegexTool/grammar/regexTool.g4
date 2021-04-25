@@ -40,12 +40,12 @@ statement
     ;
 
 label_stmt
-    :   'label' IDENT '=' term term_list
+    :   'label' name=IDENT '=' val=term term_list
     ;
 
 capture_stmt
-    :   'capture' IDENT '=' term term_list
-    |   'capture[]' IDENT '=' term term_list
+    :   'capture' name=IDENT '=' term term_list
+    |   'capture[]' name=IDENT '=' term term_list
     ;
 
 build_stmt
@@ -58,7 +58,7 @@ test_stmt
     ;
 
 func_stmt
-    :   'function' IDENT '(' param_list ')' '=' term_list;
+    :   'function' name=IDENT '(' params=param_list ')' '=' terms=term_list;
 
 term_list
     :   term term_list
@@ -66,17 +66,17 @@ term_list
     ;
 
 func_call
-    :   variable '(' arg_list ')';
+    :   name=variable '(' args=arg_list ')';
 
 term
-    :   func_call
-    |   QUOTE
-    |   variable
+    :   func=func_call #funcTerm
+    |   QUOTE #quoteTerm
+    |   var=variable #varTerm
     ;
 
 variable
-    :   IDENT
-    |   NS_IDENT
+    :   IDENT #varIdent
+    |   NS_IDENT #varNSIdent
     ;
 
 param
@@ -84,22 +84,22 @@ param
     ;
 
 arg_list
-    :   term arg_list_tail
-    |
+    :   val=term arg_list_tail #argHead
+    | #argEmpty
     ;
 
 arg_list_tail
-    :   ',' term arg_list_tail
-    |
+    :  ',' val=term arg_list_tail #argListTail
+    | #argListDone
     ;
 
 param_list
-    :   param param_list_tail
+    :   par=param param_list_tail
     |
     ;
 
 param_list_tail
-    :   ',' param param_list_tail
+    :   ',' par=param param_list_tail
     |
     ;
 

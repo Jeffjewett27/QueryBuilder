@@ -138,25 +138,65 @@ public interface regexToolListener extends ParseTreeListener {
 	 */
 	void exitFunc_call(regexToolParser.Func_callContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link regexToolParser#term}.
+	 * Enter a parse tree produced by the {@code funcTerm}
+	 * labeled alternative in {@link regexToolParser#term}.
 	 * @param ctx the parse tree
 	 */
-	void enterTerm(regexToolParser.TermContext ctx);
+	void enterFuncTerm(regexToolParser.FuncTermContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link regexToolParser#term}.
+	 * Exit a parse tree produced by the {@code funcTerm}
+	 * labeled alternative in {@link regexToolParser#term}.
 	 * @param ctx the parse tree
 	 */
-	void exitTerm(regexToolParser.TermContext ctx);
+	void exitFuncTerm(regexToolParser.FuncTermContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link regexToolParser#variable}.
+	 * Enter a parse tree produced by the {@code quoteTerm}
+	 * labeled alternative in {@link regexToolParser#term}.
 	 * @param ctx the parse tree
 	 */
-	void enterVariable(regexToolParser.VariableContext ctx);
+	void enterQuoteTerm(regexToolParser.QuoteTermContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link regexToolParser#variable}.
+	 * Exit a parse tree produced by the {@code quoteTerm}
+	 * labeled alternative in {@link regexToolParser#term}.
 	 * @param ctx the parse tree
 	 */
-	void exitVariable(regexToolParser.VariableContext ctx);
+	void exitQuoteTerm(regexToolParser.QuoteTermContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code varTerm}
+	 * labeled alternative in {@link regexToolParser#term}.
+	 * @param ctx the parse tree
+	 */
+	void enterVarTerm(regexToolParser.VarTermContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code varTerm}
+	 * labeled alternative in {@link regexToolParser#term}.
+	 * @param ctx the parse tree
+	 */
+	void exitVarTerm(regexToolParser.VarTermContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code varIdent}
+	 * labeled alternative in {@link regexToolParser#variable}.
+	 * @param ctx the parse tree
+	 */
+	void enterVarIdent(regexToolParser.VarIdentContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code varIdent}
+	 * labeled alternative in {@link regexToolParser#variable}.
+	 * @param ctx the parse tree
+	 */
+	void exitVarIdent(regexToolParser.VarIdentContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code varNSIdent}
+	 * labeled alternative in {@link regexToolParser#variable}.
+	 * @param ctx the parse tree
+	 */
+	void enterVarNSIdent(regexToolParser.VarNSIdentContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code varNSIdent}
+	 * labeled alternative in {@link regexToolParser#variable}.
+	 * @param ctx the parse tree
+	 */
+	void exitVarNSIdent(regexToolParser.VarNSIdentContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link regexToolParser#param}.
 	 * @param ctx the parse tree
@@ -168,25 +208,53 @@ public interface regexToolListener extends ParseTreeListener {
 	 */
 	void exitParam(regexToolParser.ParamContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link regexToolParser#arg_list}.
+	 * Enter a parse tree produced by the {@code argHead}
+	 * labeled alternative in {@link regexToolParser#arg_list}.
 	 * @param ctx the parse tree
 	 */
-	void enterArg_list(regexToolParser.Arg_listContext ctx);
+	void enterArgHead(regexToolParser.ArgHeadContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link regexToolParser#arg_list}.
+	 * Exit a parse tree produced by the {@code argHead}
+	 * labeled alternative in {@link regexToolParser#arg_list}.
 	 * @param ctx the parse tree
 	 */
-	void exitArg_list(regexToolParser.Arg_listContext ctx);
+	void exitArgHead(regexToolParser.ArgHeadContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link regexToolParser#arg_list_tail}.
+	 * Enter a parse tree produced by the {@code argEmpty}
+	 * labeled alternative in {@link regexToolParser#arg_list}.
 	 * @param ctx the parse tree
 	 */
-	void enterArg_list_tail(regexToolParser.Arg_list_tailContext ctx);
+	void enterArgEmpty(regexToolParser.ArgEmptyContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link regexToolParser#arg_list_tail}.
+	 * Exit a parse tree produced by the {@code argEmpty}
+	 * labeled alternative in {@link regexToolParser#arg_list}.
 	 * @param ctx the parse tree
 	 */
-	void exitArg_list_tail(regexToolParser.Arg_list_tailContext ctx);
+	void exitArgEmpty(regexToolParser.ArgEmptyContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code argListTail}
+	 * labeled alternative in {@link regexToolParser#arg_list_tail}.
+	 * @param ctx the parse tree
+	 */
+	void enterArgListTail(regexToolParser.ArgListTailContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code argListTail}
+	 * labeled alternative in {@link regexToolParser#arg_list_tail}.
+	 * @param ctx the parse tree
+	 */
+	void exitArgListTail(regexToolParser.ArgListTailContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code argListDone}
+	 * labeled alternative in {@link regexToolParser#arg_list_tail}.
+	 * @param ctx the parse tree
+	 */
+	void enterArgListDone(regexToolParser.ArgListDoneContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code argListDone}
+	 * labeled alternative in {@link regexToolParser#arg_list_tail}.
+	 * @param ctx the parse tree
+	 */
+	void exitArgListDone(regexToolParser.ArgListDoneContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link regexToolParser#param_list}.
 	 * @param ctx the parse tree
