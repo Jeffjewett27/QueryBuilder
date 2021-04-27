@@ -1,10 +1,10 @@
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 
 public class Terms {
     public List<Term> terms;
-    public HashSet<String> parameters;
 
     public Terms(List<Term> terms) {
         this.terms = terms;
@@ -12,20 +12,21 @@ public class Terms {
 
     public Terms() {
         this.terms = new ArrayList<>();
-        parameters = new HashSet<>();
-    }
-
-    public Terms(HashSet<String> params) {
-        parameters = params;
     }
 
     @Override public String toString() {
         StringBuilder b = new StringBuilder();
         b.append('{');
         b.append(terms.toString());
-        b.append(',');
-        b.append(parameters);
         b.append('}');
+        return b.toString();
+    }
+
+    public String getRawString(HashMap<String, SymbolTable> namespaces) {
+        StringBuilder b = new StringBuilder();
+        for (Term t : terms) {
+            b.append(t.getRawString(namespaces));
+        }
         return b.toString();
     }
 }

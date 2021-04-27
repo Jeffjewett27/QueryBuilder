@@ -17,11 +17,47 @@ public interface regexToolVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitStart(regexToolParser.StartContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link regexToolParser#imports}.
+	 * Visit a parse tree produced by the {@code importLE}
+	 * labeled alternative in {@link regexToolParser#imports}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitImports(regexToolParser.ImportsContext ctx);
+	T visitImportLE(regexToolParser.ImportLEContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code importFE}
+	 * labeled alternative in {@link regexToolParser#imports}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitImportFE(regexToolParser.ImportFEContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code importCommentLE}
+	 * labeled alternative in {@link regexToolParser#imports}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitImportCommentLE(regexToolParser.ImportCommentLEContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code importCommentFE}
+	 * labeled alternative in {@link regexToolParser#imports}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitImportCommentFE(regexToolParser.ImportCommentFEContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code importEmpty}
+	 * labeled alternative in {@link regexToolParser#imports}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitImportEmpty(regexToolParser.ImportEmptyContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code importEnd}
+	 * labeled alternative in {@link regexToolParser#imports}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitImportEnd(regexToolParser.ImportEndContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link regexToolParser#namespace}.
 	 * @param ctx the parse tree
@@ -65,11 +101,19 @@ public interface regexToolVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitBuild_stmt(regexToolParser.Build_stmtContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link regexToolParser#test_stmt}.
+	 * Visit a parse tree produced by the {@code testQuote}
+	 * labeled alternative in {@link regexToolParser#test_stmt}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitTest_stmt(regexToolParser.Test_stmtContext ctx);
+	T visitTestQuote(regexToolParser.TestQuoteContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code testConst}
+	 * labeled alternative in {@link regexToolParser#test_stmt}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitTestConst(regexToolParser.TestConstContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link regexToolParser#func_stmt}.
 	 * @param ctx the parse tree

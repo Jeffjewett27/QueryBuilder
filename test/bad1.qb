@@ -1,1 +1,6 @@
-bad input
+import "test/good4.qb"
+
+label test1 = thisns.ftest
+
+build output = test1
+test output @STDIN

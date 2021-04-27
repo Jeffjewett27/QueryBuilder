@@ -7,16 +7,16 @@ options {
 start:  imports namespace? statements;
 
 imports
-    :   'import' QUOTE LINE_END  {System.out.println("import");} imports
-    |   'import' QUOTE EOF
-    |   comment LINE_END  {System.out.println("import comment");} imports
-    |   comment EOF
-    |   LINE_END imports
-    | {System.out.println("import end");}
+    :   'import' fname=QUOTE LINE_END imports #importLE
+    |   'import' fname=QUOTE EOF #importFE
+    |   comment LINE_END imports #importCommentLE
+    |   comment EOF #importCommentFE
+    |   LINE_END imports #importEmpty
+    | #importEnd
     ;
 
 namespace
-    :   'namespace' IDENT LINE_END {System.out.println("namespace");}
+    :   'namespace' name=IDENT LINE_END
     ;
 
 comment
@@ -49,12 +49,12 @@ capture_stmt
     ;
 
 build_stmt
-    :   'build' IDENT '=' variable CONSTANT*
+    :   'build' name=IDENT '=' label=variable flags=CONSTANT*
     ;
 
 test_stmt
-    :   'test' variable QUOTE
-    |   'test' variable CONSTANT
+    :   'test' build=variable input=QUOTE #testQuote
+    |   'test' build=variable input=CONSTANT #testConst
     ;
 
 func_stmt
@@ -103,7 +103,7 @@ param_list_tail
     |
     ;
 
-QUOTE: '\'' (~['\\\r\n] | '\\' .)* '\'';
+QUOTE: ['"] (~['"\\\r\n] | '\\' .)* ['"];
 
 IDENT: [a-zA-Z_$] [a-zA-Z0-9_$]*;
 

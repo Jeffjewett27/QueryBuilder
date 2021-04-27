@@ -1,0 +1,16 @@
+# declare the namespace
+# (optional unless you import this file into a different file)
+namespace example
+
+capture firstname = "[a-zA-z]+"
+capture[] lastname = "[a-zA-z]+"
+label fullname = firstname "\s" lastname
+
+function fencepost(x,y) = x "(?>" y x ")*"
+label namelist = fencepost(fullname, ",\s?")
+
+# build regex form
+build output = namelist
+
+# test against STDIN
+test output 'test/inputfile.txt'

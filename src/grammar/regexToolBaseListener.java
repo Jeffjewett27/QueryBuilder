@@ -28,13 +28,73 @@ public class regexToolBaseListener implements regexToolListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterImports(regexToolParser.ImportsContext ctx) { }
+	@Override public void enterImportLE(regexToolParser.ImportLEContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitImports(regexToolParser.ImportsContext ctx) { }
+	@Override public void exitImportLE(regexToolParser.ImportLEContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterImportFE(regexToolParser.ImportFEContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitImportFE(regexToolParser.ImportFEContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterImportCommentLE(regexToolParser.ImportCommentLEContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitImportCommentLE(regexToolParser.ImportCommentLEContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterImportCommentFE(regexToolParser.ImportCommentFEContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitImportCommentFE(regexToolParser.ImportCommentFEContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterImportEmpty(regexToolParser.ImportEmptyContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitImportEmpty(regexToolParser.ImportEmptyContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterImportEnd(regexToolParser.ImportEndContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitImportEnd(regexToolParser.ImportEndContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -124,13 +184,25 @@ public class regexToolBaseListener implements regexToolListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterTest_stmt(regexToolParser.Test_stmtContext ctx) { }
+	@Override public void enterTestQuote(regexToolParser.TestQuoteContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitTest_stmt(regexToolParser.Test_stmtContext ctx) { }
+	@Override public void exitTestQuote(regexToolParser.TestQuoteContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterTestConst(regexToolParser.TestConstContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitTestConst(regexToolParser.TestConstContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *

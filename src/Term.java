@@ -1,4 +1,6 @@
-public class Term {
+import java.util.HashMap;
+
+public abstract class Term {
     public enum Type {
         VARIABLE,
         FUNCTION,
@@ -14,12 +16,6 @@ public class Term {
         this.namespace = namespace;
     }
 
-    public Term(Type type, String id) {
-        this.type = type;
-        this.id = id;
-        this.namespace = "";
-    }
-
     @Override public String toString() {
         StringBuilder b = new StringBuilder();
         b.append('{');
@@ -32,4 +28,6 @@ public class Term {
         return b.toString();
 
     }
+
+    public abstract String getRawString(HashMap<String, SymbolTable> namespaces);
 }

@@ -7,13 +7,13 @@ import java.util.MissingFormatArgumentException;
 
 
 public class QueryBuilder {
-    public void parseFile(InputStream file) {
+    public SymbolTable parseFile(InputStream file) {
         ANTLRInputStream inputStream = null;
         try {
             inputStream = new ANTLRInputStream(file);
         } catch (IOException error) {
             error.printStackTrace();
-            return;
+            return null;
         }
 
         regexToolLexer lexer = new regexToolLexer(inputStream);
@@ -24,6 +24,7 @@ public class QueryBuilder {
         queryBuilderListener listener = new queryBuilderListener();
 
         walker.walk(listener,startContext);
+        return listener.namespaces.get(listener.thisNamespace);
     }
 
     public static void main(String[] args) throws Exception {

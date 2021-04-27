@@ -18,15 +18,77 @@ public interface regexToolListener extends ParseTreeListener {
 	 */
 	void exitStart(regexToolParser.StartContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link regexToolParser#imports}.
+	 * Enter a parse tree produced by the {@code importLE}
+	 * labeled alternative in {@link regexToolParser#imports}.
 	 * @param ctx the parse tree
 	 */
-	void enterImports(regexToolParser.ImportsContext ctx);
+	void enterImportLE(regexToolParser.ImportLEContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link regexToolParser#imports}.
+	 * Exit a parse tree produced by the {@code importLE}
+	 * labeled alternative in {@link regexToolParser#imports}.
 	 * @param ctx the parse tree
 	 */
-	void exitImports(regexToolParser.ImportsContext ctx);
+	void exitImportLE(regexToolParser.ImportLEContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code importFE}
+	 * labeled alternative in {@link regexToolParser#imports}.
+	 * @param ctx the parse tree
+	 */
+	void enterImportFE(regexToolParser.ImportFEContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code importFE}
+	 * labeled alternative in {@link regexToolParser#imports}.
+	 * @param ctx the parse tree
+	 */
+	void exitImportFE(regexToolParser.ImportFEContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code importCommentLE}
+	 * labeled alternative in {@link regexToolParser#imports}.
+	 * @param ctx the parse tree
+	 */
+	void enterImportCommentLE(regexToolParser.ImportCommentLEContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code importCommentLE}
+	 * labeled alternative in {@link regexToolParser#imports}.
+	 * @param ctx the parse tree
+	 */
+	void exitImportCommentLE(regexToolParser.ImportCommentLEContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code importCommentFE}
+	 * labeled alternative in {@link regexToolParser#imports}.
+	 * @param ctx the parse tree
+	 */
+	void enterImportCommentFE(regexToolParser.ImportCommentFEContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code importCommentFE}
+	 * labeled alternative in {@link regexToolParser#imports}.
+	 * @param ctx the parse tree
+	 */
+	void exitImportCommentFE(regexToolParser.ImportCommentFEContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code importEmpty}
+	 * labeled alternative in {@link regexToolParser#imports}.
+	 * @param ctx the parse tree
+	 */
+	void enterImportEmpty(regexToolParser.ImportEmptyContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code importEmpty}
+	 * labeled alternative in {@link regexToolParser#imports}.
+	 * @param ctx the parse tree
+	 */
+	void exitImportEmpty(regexToolParser.ImportEmptyContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code importEnd}
+	 * labeled alternative in {@link regexToolParser#imports}.
+	 * @param ctx the parse tree
+	 */
+	void enterImportEnd(regexToolParser.ImportEndContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code importEnd}
+	 * labeled alternative in {@link regexToolParser#imports}.
+	 * @param ctx the parse tree
+	 */
+	void exitImportEnd(regexToolParser.ImportEndContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link regexToolParser#namespace}.
 	 * @param ctx the parse tree
@@ -98,15 +160,29 @@ public interface regexToolListener extends ParseTreeListener {
 	 */
 	void exitBuild_stmt(regexToolParser.Build_stmtContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link regexToolParser#test_stmt}.
+	 * Enter a parse tree produced by the {@code testQuote}
+	 * labeled alternative in {@link regexToolParser#test_stmt}.
 	 * @param ctx the parse tree
 	 */
-	void enterTest_stmt(regexToolParser.Test_stmtContext ctx);
+	void enterTestQuote(regexToolParser.TestQuoteContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link regexToolParser#test_stmt}.
+	 * Exit a parse tree produced by the {@code testQuote}
+	 * labeled alternative in {@link regexToolParser#test_stmt}.
 	 * @param ctx the parse tree
 	 */
-	void exitTest_stmt(regexToolParser.Test_stmtContext ctx);
+	void exitTestQuote(regexToolParser.TestQuoteContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code testConst}
+	 * labeled alternative in {@link regexToolParser#test_stmt}.
+	 * @param ctx the parse tree
+	 */
+	void enterTestConst(regexToolParser.TestConstContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code testConst}
+	 * labeled alternative in {@link regexToolParser#test_stmt}.
+	 * @param ctx the parse tree
+	 */
+	void exitTestConst(regexToolParser.TestConstContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link regexToolParser#func_stmt}.
 	 * @param ctx the parse tree

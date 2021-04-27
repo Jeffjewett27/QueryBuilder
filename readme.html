@@ -63,7 +63,7 @@ Authors
 ------------------|-------------
 names             | Owen Elliott / Jeff Jewett
 computer + OS     | cse21703 (Ubuntu)
-time to complete  | 6 hours
+time to complete  | 14 hours
 </div>
 
 
@@ -268,6 +268,84 @@ build output = missingQuotes
 #the parser rejects this input
 ```
 
+
+
+Translator
+==================
+
+We used the ANTLR listener classes as a tool to build a translator for QueryBuilder. We accomplished our goal of making a language that is easy to write in while being functional.
+
+The best way to explain it is to show a few examples. The following QueryBuilder program is an example of the proper way to utilize the language.
+
+```
+# declare the namespace
+# (optional unless you import this file into a different file)
+namespace example
+
+capture firstname = "[a-zA-z]+"
+capture[] lastname = "[a-zA-z]+"
+label fullname = firstname "\s" lastname
+
+function fencepost(x,y) = x "(" y x ")*"
+label namelist = fencepost(fullname, ",\s?")
+
+# build regex form
+build output = namelist
+
+# test against STDIN
+test output @STDIN
+```
+
+![Result (from STDIN)](result1.png)
+
+As you can see, the compiled regex statement successfully matched the user input string. You can also match a different file by replacing `test output @STDIN` with something like `test output 'test/inputfile.txt'`
+
+![Result (from file)](result2.png)
+
+Here are a few of the situations where our translator will catch semantic errors in the code. We created a SymbolTable class that stores all the named labels, functions, builds, etc. and used it to make sure the code doesn't try to declare
+more than one of these with the same identifier. The following code tries to declare two labels with the same name:
+
+```
+label example = "[^abc]"
+label example = "[^def]"
+
+build output = example
+test output @STDIN
+```
+
+The process ends with the message `Cannot overwrite an existing label or function name: example`.
+
+The previous example also did not have a namespace declared. While that is legal, it would cause a problem if a different program imported it, as its symbols are referenced by that name.
+
+The error message `Imported files must have a namespace: test/testFile1.qb` would appear if testFile1 was about to be imported and it didn't have a declared namespace.
+
+Similarly, if you try to import a file that doesn't exist, the program will halt with the error message `Could not open file filename.txt`.
+
+Another feature of QueryBuilder is the concept of namespaces. By importing other files, their symbols are accessed with the syntax `namespace.symbol`. For example, take a look at the following program.
+
+```
+import "test/good4.qb"
+
+label test1 = aNameSpace.ftest
+
+build output = test1
+test output @STDIN
+```
+And this is what `good4.qb` has:
+
+```
+namespace aNameSpace
+
+label ex = 'ex'
+
+function concat (a,b) = a "(?>" b a ")*"
+
+label ftest = concat('g', 'h')
+
+build out = ftest
+```
+
+![Result (imports)](result3.png)
 
 
 

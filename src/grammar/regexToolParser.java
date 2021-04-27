@@ -165,30 +165,133 @@ public class regexToolParser extends Parser {
 	}
 
 	public static class ImportsContext extends ParserRuleContext {
-		public TerminalNode QUOTE() { return getToken(regexToolParser.QUOTE, 0); }
-		public TerminalNode LINE_END() { return getToken(regexToolParser.LINE_END, 0); }
-		public ImportsContext imports() {
-			return getRuleContext(ImportsContext.class,0);
-		}
-		public TerminalNode EOF() { return getToken(regexToolParser.EOF, 0); }
-		public CommentContext comment() {
-			return getRuleContext(CommentContext.class,0);
-		}
 		public ImportsContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_imports; }
+	 
+		public ImportsContext() { }
+		public void copyFrom(ImportsContext ctx) {
+			super.copyFrom(ctx);
+		}
+	}
+	public static class ImportCommentFEContext extends ImportsContext {
+		public CommentContext comment() {
+			return getRuleContext(CommentContext.class,0);
+		}
+		public TerminalNode EOF() { return getToken(regexToolParser.EOF, 0); }
+		public ImportCommentFEContext(ImportsContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof regexToolListener ) ((regexToolListener)listener).enterImports(this);
+			if ( listener instanceof regexToolListener ) ((regexToolListener)listener).enterImportCommentFE(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof regexToolListener ) ((regexToolListener)listener).exitImports(this);
+			if ( listener instanceof regexToolListener ) ((regexToolListener)listener).exitImportCommentFE(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof regexToolVisitor ) return ((regexToolVisitor<? extends T>)visitor).visitImports(this);
+			if ( visitor instanceof regexToolVisitor ) return ((regexToolVisitor<? extends T>)visitor).visitImportCommentFE(this);
+			else return visitor.visitChildren(this);
+		}
+	}
+	public static class ImportEmptyContext extends ImportsContext {
+		public TerminalNode LINE_END() { return getToken(regexToolParser.LINE_END, 0); }
+		public ImportsContext imports() {
+			return getRuleContext(ImportsContext.class,0);
+		}
+		public ImportEmptyContext(ImportsContext ctx) { copyFrom(ctx); }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof regexToolListener ) ((regexToolListener)listener).enterImportEmpty(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof regexToolListener ) ((regexToolListener)listener).exitImportEmpty(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof regexToolVisitor ) return ((regexToolVisitor<? extends T>)visitor).visitImportEmpty(this);
+			else return visitor.visitChildren(this);
+		}
+	}
+	public static class ImportFEContext extends ImportsContext {
+		public Token fname;
+		public TerminalNode EOF() { return getToken(regexToolParser.EOF, 0); }
+		public TerminalNode QUOTE() { return getToken(regexToolParser.QUOTE, 0); }
+		public ImportFEContext(ImportsContext ctx) { copyFrom(ctx); }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof regexToolListener ) ((regexToolListener)listener).enterImportFE(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof regexToolListener ) ((regexToolListener)listener).exitImportFE(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof regexToolVisitor ) return ((regexToolVisitor<? extends T>)visitor).visitImportFE(this);
+			else return visitor.visitChildren(this);
+		}
+	}
+	public static class ImportEndContext extends ImportsContext {
+		public ImportEndContext(ImportsContext ctx) { copyFrom(ctx); }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof regexToolListener ) ((regexToolListener)listener).enterImportEnd(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof regexToolListener ) ((regexToolListener)listener).exitImportEnd(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof regexToolVisitor ) return ((regexToolVisitor<? extends T>)visitor).visitImportEnd(this);
+			else return visitor.visitChildren(this);
+		}
+	}
+	public static class ImportCommentLEContext extends ImportsContext {
+		public CommentContext comment() {
+			return getRuleContext(CommentContext.class,0);
+		}
+		public TerminalNode LINE_END() { return getToken(regexToolParser.LINE_END, 0); }
+		public ImportsContext imports() {
+			return getRuleContext(ImportsContext.class,0);
+		}
+		public ImportCommentLEContext(ImportsContext ctx) { copyFrom(ctx); }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof regexToolListener ) ((regexToolListener)listener).enterImportCommentLE(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof regexToolListener ) ((regexToolListener)listener).exitImportCommentLE(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof regexToolVisitor ) return ((regexToolVisitor<? extends T>)visitor).visitImportCommentLE(this);
+			else return visitor.visitChildren(this);
+		}
+	}
+	public static class ImportLEContext extends ImportsContext {
+		public Token fname;
+		public TerminalNode LINE_END() { return getToken(regexToolParser.LINE_END, 0); }
+		public ImportsContext imports() {
+			return getRuleContext(ImportsContext.class,0);
+		}
+		public TerminalNode QUOTE() { return getToken(regexToolParser.QUOTE, 0); }
+		public ImportLEContext(ImportsContext ctx) { copyFrom(ctx); }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof regexToolListener ) ((regexToolListener)listener).enterImportLE(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof regexToolListener ) ((regexToolListener)listener).exitImportLE(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof regexToolVisitor ) return ((regexToolVisitor<? extends T>)visitor).visitImportLE(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -197,68 +300,71 @@ public class regexToolParser extends Parser {
 		ImportsContext _localctx = new ImportsContext(_ctx, getState());
 		enterRule(_localctx, 2, RULE_imports);
 		try {
-			setState(65);
+			setState(63);
 			_errHandler.sync(this);
 			switch ( getInterpreter().adaptivePredict(_input,1,_ctx) ) {
 			case 1:
+				_localctx = new ImportLEContext(_localctx);
 				enterOuterAlt(_localctx, 1);
 				{
 				setState(46);
 				match(T__0);
 				setState(47);
-				match(QUOTE);
+				((ImportLEContext)_localctx).fname = match(QUOTE);
 				setState(48);
 				match(LINE_END);
-				System.out.println("import");
-				setState(50);
+				setState(49);
 				imports();
 				}
 				break;
 			case 2:
+				_localctx = new ImportFEContext(_localctx);
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(51);
+				setState(50);
 				match(T__0);
+				setState(51);
+				((ImportFEContext)_localctx).fname = match(QUOTE);
 				setState(52);
-				match(QUOTE);
-				setState(53);
 				match(EOF);
 				}
 				break;
 			case 3:
+				_localctx = new ImportCommentLEContext(_localctx);
 				enterOuterAlt(_localctx, 3);
 				{
-				setState(54);
+				setState(53);
 				comment();
-				setState(55);
+				setState(54);
 				match(LINE_END);
-				System.out.println("import comment");
-				setState(57);
+				setState(55);
 				imports();
 				}
 				break;
 			case 4:
+				_localctx = new ImportCommentFEContext(_localctx);
 				enterOuterAlt(_localctx, 4);
 				{
-				setState(59);
+				setState(57);
 				comment();
-				setState(60);
+				setState(58);
 				match(EOF);
 				}
 				break;
 			case 5:
+				_localctx = new ImportEmptyContext(_localctx);
 				enterOuterAlt(_localctx, 5);
 				{
-				setState(62);
+				setState(60);
 				match(LINE_END);
-				setState(63);
+				setState(61);
 				imports();
 				}
 				break;
 			case 6:
+				_localctx = new ImportEndContext(_localctx);
 				enterOuterAlt(_localctx, 6);
 				{
-				System.out.println("import end");
 				}
 				break;
 			}
@@ -275,8 +381,9 @@ public class regexToolParser extends Parser {
 	}
 
 	public static class NamespaceContext extends ParserRuleContext {
-		public TerminalNode IDENT() { return getToken(regexToolParser.IDENT, 0); }
+		public Token name;
 		public TerminalNode LINE_END() { return getToken(regexToolParser.LINE_END, 0); }
+		public TerminalNode IDENT() { return getToken(regexToolParser.IDENT, 0); }
 		public NamespaceContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
@@ -302,13 +409,12 @@ public class regexToolParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(67);
+			setState(65);
 			match(T__1);
-			setState(68);
-			match(IDENT);
-			setState(69);
+			setState(66);
+			((NamespaceContext)_localctx).name = match(IDENT);
+			setState(67);
 			match(LINE_END);
-			System.out.println("namespace");
 			}
 		}
 		catch (RecognitionException re) {
@@ -353,15 +459,15 @@ public class regexToolParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(72);
+			setState(69);
 			match(T__2);
-			setState(76);
+			setState(73);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__0) | (1L << T__1) | (1L << T__2) | (1L << T__4) | (1L << T__5) | (1L << T__6) | (1L << T__7) | (1L << T__8) | (1L << T__9) | (1L << T__10) | (1L << T__11) | (1L << T__12) | (1L << T__13) | (1L << QUOTE) | (1L << IDENT) | (1L << NS_IDENT) | (1L << WS) | (1L << CONSTANT))) != 0)) {
 				{
 				{
-				setState(73);
+				setState(70);
 				_la = _input.LA(1);
 				if ( _la <= 0 || (_la==T__3 || _la==LINE_END) ) {
 				_errHandler.recoverInline(this);
@@ -373,7 +479,7 @@ public class regexToolParser extends Parser {
 				}
 				}
 				}
-				setState(78);
+				setState(75);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			}
@@ -422,42 +528,42 @@ public class regexToolParser extends Parser {
 		StatementsContext _localctx = new StatementsContext(_ctx, getState());
 		enterRule(_localctx, 8, RULE_statements);
 		try {
-			setState(89);
+			setState(86);
 			_errHandler.sync(this);
 			switch ( getInterpreter().adaptivePredict(_input,3,_ctx) ) {
 			case 1:
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(79);
+				setState(76);
 				statement();
-				setState(80);
+				setState(77);
 				match(LINE_END);
-				setState(81);
+				setState(78);
 				statements();
 				}
 				break;
 			case 2:
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(83);
+				setState(80);
 				statement();
-				setState(84);
+				setState(81);
 				match(EOF);
 				}
 				break;
 			case 3:
 				enterOuterAlt(_localctx, 3);
 				{
-				setState(86);
+				setState(83);
 				match(LINE_END);
-				setState(87);
+				setState(84);
 				statements();
 				}
 				break;
 			case 4:
 				enterOuterAlt(_localctx, 4);
 				{
-				setState(88);
+				setState(85);
 				match(EOF);
 				}
 				break;
@@ -516,13 +622,13 @@ public class regexToolParser extends Parser {
 		StatementContext _localctx = new StatementContext(_ctx, getState());
 		enterRule(_localctx, 10, RULE_statement);
 		try {
-			setState(97);
+			setState(94);
 			_errHandler.sync(this);
 			switch (_input.LA(1)) {
 			case T__4:
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(91);
+				setState(88);
 				label_stmt();
 				}
 				break;
@@ -530,35 +636,35 @@ public class regexToolParser extends Parser {
 			case T__7:
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(92);
+				setState(89);
 				capture_stmt();
 				}
 				break;
 			case T__2:
 				enterOuterAlt(_localctx, 3);
 				{
-				setState(93);
+				setState(90);
 				comment();
 				}
 				break;
 			case T__8:
 				enterOuterAlt(_localctx, 4);
 				{
-				setState(94);
+				setState(91);
 				build_stmt();
 				}
 				break;
 			case T__9:
 				enterOuterAlt(_localctx, 5);
 				{
-				setState(95);
+				setState(92);
 				test_stmt();
 				}
 				break;
 			case T__10:
 				enterOuterAlt(_localctx, 6);
 				{
-				setState(96);
+				setState(93);
 				func_stmt();
 				}
 				break;
@@ -612,15 +718,15 @@ public class regexToolParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(99);
+			setState(96);
 			match(T__4);
-			setState(100);
+			setState(97);
 			((Label_stmtContext)_localctx).name = match(IDENT);
-			setState(101);
+			setState(98);
 			match(T__5);
-			setState(102);
+			setState(99);
 			((Label_stmtContext)_localctx).val = term();
-			setState(103);
+			setState(100);
 			term_list();
 			}
 		}
@@ -667,36 +773,36 @@ public class regexToolParser extends Parser {
 		Capture_stmtContext _localctx = new Capture_stmtContext(_ctx, getState());
 		enterRule(_localctx, 14, RULE_capture_stmt);
 		try {
-			setState(117);
+			setState(114);
 			_errHandler.sync(this);
 			switch (_input.LA(1)) {
 			case T__6:
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(105);
+				setState(102);
 				match(T__6);
-				setState(106);
+				setState(103);
 				((Capture_stmtContext)_localctx).name = match(IDENT);
-				setState(107);
+				setState(104);
 				match(T__5);
-				setState(108);
+				setState(105);
 				term();
-				setState(109);
+				setState(106);
 				term_list();
 				}
 				break;
 			case T__7:
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(111);
+				setState(108);
 				match(T__7);
-				setState(112);
+				setState(109);
 				((Capture_stmtContext)_localctx).name = match(IDENT);
-				setState(113);
+				setState(110);
 				match(T__5);
-				setState(114);
+				setState(111);
 				term();
-				setState(115);
+				setState(112);
 				term_list();
 				}
 				break;
@@ -716,6 +822,9 @@ public class regexToolParser extends Parser {
 	}
 
 	public static class Build_stmtContext extends ParserRuleContext {
+		public Token name;
+		public VariableContext label;
+		public Token flags;
 		public TerminalNode IDENT() { return getToken(regexToolParser.IDENT, 0); }
 		public VariableContext variable() {
 			return getRuleContext(VariableContext.class,0);
@@ -750,25 +859,25 @@ public class regexToolParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(119);
+			setState(116);
 			match(T__8);
-			setState(120);
-			match(IDENT);
-			setState(121);
+			setState(117);
+			((Build_stmtContext)_localctx).name = match(IDENT);
+			setState(118);
 			match(T__5);
-			setState(122);
-			variable();
-			setState(126);
+			setState(119);
+			((Build_stmtContext)_localctx).label = variable();
+			setState(123);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			while (_la==CONSTANT) {
 				{
 				{
-				setState(123);
-				match(CONSTANT);
+				setState(120);
+				((Build_stmtContext)_localctx).flags = match(CONSTANT);
 				}
 				}
-				setState(128);
+				setState(125);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			}
@@ -786,26 +895,57 @@ public class regexToolParser extends Parser {
 	}
 
 	public static class Test_stmtContext extends ParserRuleContext {
-		public VariableContext variable() {
-			return getRuleContext(VariableContext.class,0);
-		}
-		public TerminalNode QUOTE() { return getToken(regexToolParser.QUOTE, 0); }
-		public TerminalNode CONSTANT() { return getToken(regexToolParser.CONSTANT, 0); }
 		public Test_stmtContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_test_stmt; }
+	 
+		public Test_stmtContext() { }
+		public void copyFrom(Test_stmtContext ctx) {
+			super.copyFrom(ctx);
+		}
+	}
+	public static class TestConstContext extends Test_stmtContext {
+		public VariableContext build;
+		public Token input;
+		public VariableContext variable() {
+			return getRuleContext(VariableContext.class,0);
+		}
+		public TerminalNode CONSTANT() { return getToken(regexToolParser.CONSTANT, 0); }
+		public TestConstContext(Test_stmtContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof regexToolListener ) ((regexToolListener)listener).enterTest_stmt(this);
+			if ( listener instanceof regexToolListener ) ((regexToolListener)listener).enterTestConst(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof regexToolListener ) ((regexToolListener)listener).exitTest_stmt(this);
+			if ( listener instanceof regexToolListener ) ((regexToolListener)listener).exitTestConst(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof regexToolVisitor ) return ((regexToolVisitor<? extends T>)visitor).visitTest_stmt(this);
+			if ( visitor instanceof regexToolVisitor ) return ((regexToolVisitor<? extends T>)visitor).visitTestConst(this);
+			else return visitor.visitChildren(this);
+		}
+	}
+	public static class TestQuoteContext extends Test_stmtContext {
+		public VariableContext build;
+		public Token input;
+		public VariableContext variable() {
+			return getRuleContext(VariableContext.class,0);
+		}
+		public TerminalNode QUOTE() { return getToken(regexToolParser.QUOTE, 0); }
+		public TestQuoteContext(Test_stmtContext ctx) { copyFrom(ctx); }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof regexToolListener ) ((regexToolListener)listener).enterTestQuote(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof regexToolListener ) ((regexToolListener)listener).exitTestQuote(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof regexToolVisitor ) return ((regexToolVisitor<? extends T>)visitor).visitTestQuote(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -814,29 +954,31 @@ public class regexToolParser extends Parser {
 		Test_stmtContext _localctx = new Test_stmtContext(_ctx, getState());
 		enterRule(_localctx, 18, RULE_test_stmt);
 		try {
-			setState(137);
+			setState(134);
 			_errHandler.sync(this);
 			switch ( getInterpreter().adaptivePredict(_input,7,_ctx) ) {
 			case 1:
+				_localctx = new TestQuoteContext(_localctx);
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(129);
+				setState(126);
 				match(T__9);
-				setState(130);
-				variable();
-				setState(131);
-				match(QUOTE);
+				setState(127);
+				((TestQuoteContext)_localctx).build = variable();
+				setState(128);
+				((TestQuoteContext)_localctx).input = match(QUOTE);
 				}
 				break;
 			case 2:
+				_localctx = new TestConstContext(_localctx);
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(133);
+				setState(130);
 				match(T__9);
-				setState(134);
-				variable();
-				setState(135);
-				match(CONSTANT);
+				setState(131);
+				((TestConstContext)_localctx).build = variable();
+				setState(132);
+				((TestConstContext)_localctx).input = match(CONSTANT);
 				}
 				break;
 			}
@@ -888,19 +1030,19 @@ public class regexToolParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(139);
+			setState(136);
 			match(T__10);
-			setState(140);
+			setState(137);
 			((Func_stmtContext)_localctx).name = match(IDENT);
-			setState(141);
+			setState(138);
 			match(T__11);
-			setState(142);
+			setState(139);
 			((Func_stmtContext)_localctx).params = param_list();
-			setState(143);
+			setState(140);
 			match(T__12);
-			setState(144);
+			setState(141);
 			match(T__5);
-			setState(145);
+			setState(142);
 			((Func_stmtContext)_localctx).terms = term_list();
 			}
 		}
@@ -945,7 +1087,7 @@ public class regexToolParser extends Parser {
 		Term_listContext _localctx = new Term_listContext(_ctx, getState());
 		enterRule(_localctx, 22, RULE_term_list);
 		try {
-			setState(151);
+			setState(148);
 			_errHandler.sync(this);
 			switch (_input.LA(1)) {
 			case QUOTE:
@@ -953,9 +1095,9 @@ public class regexToolParser extends Parser {
 			case NS_IDENT:
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(147);
+				setState(144);
 				term();
-				setState(148);
+				setState(145);
 				term_list();
 				}
 				break;
@@ -1014,13 +1156,13 @@ public class regexToolParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(153);
+			setState(150);
 			((Func_callContext)_localctx).name = variable();
-			setState(154);
+			setState(151);
 			match(T__11);
-			setState(155);
+			setState(152);
 			((Func_callContext)_localctx).args = arg_list();
-			setState(156);
+			setState(153);
 			match(T__12);
 			}
 		}
@@ -1108,14 +1250,14 @@ public class regexToolParser extends Parser {
 		TermContext _localctx = new TermContext(_ctx, getState());
 		enterRule(_localctx, 26, RULE_term);
 		try {
-			setState(161);
+			setState(158);
 			_errHandler.sync(this);
 			switch ( getInterpreter().adaptivePredict(_input,9,_ctx) ) {
 			case 1:
 				_localctx = new FuncTermContext(_localctx);
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(158);
+				setState(155);
 				((FuncTermContext)_localctx).func = func_call();
 				}
 				break;
@@ -1123,7 +1265,7 @@ public class regexToolParser extends Parser {
 				_localctx = new QuoteTermContext(_localctx);
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(159);
+				setState(156);
 				match(QUOTE);
 				}
 				break;
@@ -1131,7 +1273,7 @@ public class regexToolParser extends Parser {
 				_localctx = new VarTermContext(_localctx);
 				enterOuterAlt(_localctx, 3);
 				{
-				setState(160);
+				setState(157);
 				((VarTermContext)_localctx).var = variable();
 				}
 				break;
@@ -1198,14 +1340,14 @@ public class regexToolParser extends Parser {
 		VariableContext _localctx = new VariableContext(_ctx, getState());
 		enterRule(_localctx, 28, RULE_variable);
 		try {
-			setState(165);
+			setState(162);
 			_errHandler.sync(this);
 			switch (_input.LA(1)) {
 			case IDENT:
 				_localctx = new VarIdentContext(_localctx);
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(163);
+				setState(160);
 				match(IDENT);
 				}
 				break;
@@ -1213,7 +1355,7 @@ public class regexToolParser extends Parser {
 				_localctx = new VarNSIdentContext(_localctx);
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(164);
+				setState(161);
 				match(NS_IDENT);
 				}
 				break;
@@ -1259,7 +1401,7 @@ public class regexToolParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(167);
+			setState(164);
 			match(IDENT);
 			}
 		}
@@ -1329,7 +1471,7 @@ public class regexToolParser extends Parser {
 		Arg_listContext _localctx = new Arg_listContext(_ctx, getState());
 		enterRule(_localctx, 32, RULE_arg_list);
 		try {
-			setState(173);
+			setState(170);
 			_errHandler.sync(this);
 			switch (_input.LA(1)) {
 			case QUOTE:
@@ -1338,9 +1480,9 @@ public class regexToolParser extends Parser {
 				_localctx = new ArgHeadContext(_localctx);
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(169);
+				setState(166);
 				((ArgHeadContext)_localctx).val = term();
-				setState(170);
+				setState(167);
 				arg_list_tail();
 				}
 				break;
@@ -1420,18 +1562,18 @@ public class regexToolParser extends Parser {
 		Arg_list_tailContext _localctx = new Arg_list_tailContext(_ctx, getState());
 		enterRule(_localctx, 34, RULE_arg_list_tail);
 		try {
-			setState(180);
+			setState(177);
 			_errHandler.sync(this);
 			switch (_input.LA(1)) {
 			case T__13:
 				_localctx = new ArgListTailContext(_localctx);
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(175);
+				setState(172);
 				match(T__13);
-				setState(176);
+				setState(173);
 				((ArgListTailContext)_localctx).val = term();
-				setState(177);
+				setState(174);
 				arg_list_tail();
 				}
 				break;
@@ -1487,15 +1629,15 @@ public class regexToolParser extends Parser {
 		Param_listContext _localctx = new Param_listContext(_ctx, getState());
 		enterRule(_localctx, 36, RULE_param_list);
 		try {
-			setState(186);
+			setState(183);
 			_errHandler.sync(this);
 			switch (_input.LA(1)) {
 			case IDENT:
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(182);
+				setState(179);
 				((Param_listContext)_localctx).par = param();
-				setState(183);
+				setState(180);
 				param_list_tail();
 				}
 				break;
@@ -1550,17 +1692,17 @@ public class regexToolParser extends Parser {
 		Param_list_tailContext _localctx = new Param_list_tailContext(_ctx, getState());
 		enterRule(_localctx, 38, RULE_param_list_tail);
 		try {
-			setState(193);
+			setState(190);
 			_errHandler.sync(this);
 			switch (_input.LA(1)) {
 			case T__13:
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(188);
+				setState(185);
 				match(T__13);
-				setState(189);
+				setState(186);
 				((Param_list_tailContext)_localctx).par = param();
-				setState(190);
+				setState(187);
 				param_list_tail();
 				}
 				break;
@@ -1585,65 +1727,63 @@ public class regexToolParser extends Parser {
 	}
 
 	public static final String _serializedATN =
-		"\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3\26\u00c6\4\2\t\2"+
+		"\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3\26\u00c3\4\2\t\2"+
 		"\4\3\t\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7\4\b\t\b\4\t\t\t\4\n\t\n\4\13"+
 		"\t\13\4\f\t\f\4\r\t\r\4\16\t\16\4\17\t\17\4\20\t\20\4\21\t\21\4\22\t\22"+
 		"\4\23\t\23\4\24\t\24\4\25\t\25\3\2\3\2\5\2-\n\2\3\2\3\2\3\3\3\3\3\3\3"+
-		"\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\5\3D\n"+
-		"\3\3\4\3\4\3\4\3\4\3\4\3\5\3\5\7\5M\n\5\f\5\16\5P\13\5\3\6\3\6\3\6\3\6"+
-		"\3\6\3\6\3\6\3\6\3\6\3\6\5\6\\\n\6\3\7\3\7\3\7\3\7\3\7\3\7\5\7d\n\7\3"+
-		"\b\3\b\3\b\3\b\3\b\3\b\3\t\3\t\3\t\3\t\3\t\3\t\3\t\3\t\3\t\3\t\3\t\3\t"+
-		"\5\tx\n\t\3\n\3\n\3\n\3\n\3\n\7\n\177\n\n\f\n\16\n\u0082\13\n\3\13\3\13"+
-		"\3\13\3\13\3\13\3\13\3\13\3\13\5\13\u008c\n\13\3\f\3\f\3\f\3\f\3\f\3\f"+
-		"\3\f\3\f\3\r\3\r\3\r\3\r\5\r\u009a\n\r\3\16\3\16\3\16\3\16\3\16\3\17\3"+
-		"\17\3\17\5\17\u00a4\n\17\3\20\3\20\5\20\u00a8\n\20\3\21\3\21\3\22\3\22"+
-		"\3\22\3\22\5\22\u00b0\n\22\3\23\3\23\3\23\3\23\3\23\5\23\u00b7\n\23\3"+
-		"\24\3\24\3\24\3\24\5\24\u00bd\n\24\3\25\3\25\3\25\3\25\3\25\5\25\u00c4"+
-		"\n\25\3\25\2\2\26\2\4\6\b\n\f\16\20\22\24\26\30\32\34\36 \"$&(\2\3\4\2"+
-		"\6\6\25\25\2\u00cb\2*\3\2\2\2\4C\3\2\2\2\6E\3\2\2\2\bJ\3\2\2\2\n[\3\2"+
-		"\2\2\fc\3\2\2\2\16e\3\2\2\2\20w\3\2\2\2\22y\3\2\2\2\24\u008b\3\2\2\2\26"+
-		"\u008d\3\2\2\2\30\u0099\3\2\2\2\32\u009b\3\2\2\2\34\u00a3\3\2\2\2\36\u00a7"+
-		"\3\2\2\2 \u00a9\3\2\2\2\"\u00af\3\2\2\2$\u00b6\3\2\2\2&\u00bc\3\2\2\2"+
-		"(\u00c3\3\2\2\2*,\5\4\3\2+-\5\6\4\2,+\3\2\2\2,-\3\2\2\2-.\3\2\2\2./\5"+
-		"\n\6\2/\3\3\2\2\2\60\61\7\3\2\2\61\62\7\21\2\2\62\63\7\25\2\2\63\64\b"+
-		"\3\1\2\64D\5\4\3\2\65\66\7\3\2\2\66\67\7\21\2\2\67D\7\2\2\389\5\b\5\2"+
-		"9:\7\25\2\2:;\b\3\1\2;<\5\4\3\2<D\3\2\2\2=>\5\b\5\2>?\7\2\2\3?D\3\2\2"+
-		"\2@A\7\25\2\2AD\5\4\3\2BD\b\3\1\2C\60\3\2\2\2C\65\3\2\2\2C8\3\2\2\2C="+
-		"\3\2\2\2C@\3\2\2\2CB\3\2\2\2D\5\3\2\2\2EF\7\4\2\2FG\7\22\2\2GH\7\25\2"+
-		"\2HI\b\4\1\2I\7\3\2\2\2JN\7\5\2\2KM\n\2\2\2LK\3\2\2\2MP\3\2\2\2NL\3\2"+
-		"\2\2NO\3\2\2\2O\t\3\2\2\2PN\3\2\2\2QR\5\f\7\2RS\7\25\2\2ST\5\n\6\2T\\"+
-		"\3\2\2\2UV\5\f\7\2VW\7\2\2\3W\\\3\2\2\2XY\7\25\2\2Y\\\5\n\6\2Z\\\7\2\2"+
-		"\3[Q\3\2\2\2[U\3\2\2\2[X\3\2\2\2[Z\3\2\2\2\\\13\3\2\2\2]d\5\16\b\2^d\5"+
-		"\20\t\2_d\5\b\5\2`d\5\22\n\2ad\5\24\13\2bd\5\26\f\2c]\3\2\2\2c^\3\2\2"+
-		"\2c_\3\2\2\2c`\3\2\2\2ca\3\2\2\2cb\3\2\2\2d\r\3\2\2\2ef\7\7\2\2fg\7\22"+
-		"\2\2gh\7\b\2\2hi\5\34\17\2ij\5\30\r\2j\17\3\2\2\2kl\7\t\2\2lm\7\22\2\2"+
-		"mn\7\b\2\2no\5\34\17\2op\5\30\r\2px\3\2\2\2qr\7\n\2\2rs\7\22\2\2st\7\b"+
-		"\2\2tu\5\34\17\2uv\5\30\r\2vx\3\2\2\2wk\3\2\2\2wq\3\2\2\2x\21\3\2\2\2"+
-		"yz\7\13\2\2z{\7\22\2\2{|\7\b\2\2|\u0080\5\36\20\2}\177\7\26\2\2~}\3\2"+
-		"\2\2\177\u0082\3\2\2\2\u0080~\3\2\2\2\u0080\u0081\3\2\2\2\u0081\23\3\2"+
-		"\2\2\u0082\u0080\3\2\2\2\u0083\u0084\7\f\2\2\u0084\u0085\5\36\20\2\u0085"+
-		"\u0086\7\21\2\2\u0086\u008c\3\2\2\2\u0087\u0088\7\f\2\2\u0088\u0089\5"+
-		"\36\20\2\u0089\u008a\7\26\2\2\u008a\u008c\3\2\2\2\u008b\u0083\3\2\2\2"+
-		"\u008b\u0087\3\2\2\2\u008c\25\3\2\2\2\u008d\u008e\7\r\2\2\u008e\u008f"+
-		"\7\22\2\2\u008f\u0090\7\16\2\2\u0090\u0091\5&\24\2\u0091\u0092\7\17\2"+
-		"\2\u0092\u0093\7\b\2\2\u0093\u0094\5\30\r\2\u0094\27\3\2\2\2\u0095\u0096"+
-		"\5\34\17\2\u0096\u0097\5\30\r\2\u0097\u009a\3\2\2\2\u0098\u009a\3\2\2"+
-		"\2\u0099\u0095\3\2\2\2\u0099\u0098\3\2\2\2\u009a\31\3\2\2\2\u009b\u009c"+
-		"\5\36\20\2\u009c\u009d\7\16\2\2\u009d\u009e\5\"\22\2\u009e\u009f\7\17"+
-		"\2\2\u009f\33\3\2\2\2\u00a0\u00a4\5\32\16\2\u00a1\u00a4\7\21\2\2\u00a2"+
-		"\u00a4\5\36\20\2\u00a3\u00a0\3\2\2\2\u00a3\u00a1\3\2\2\2\u00a3\u00a2\3"+
-		"\2\2\2\u00a4\35\3\2\2\2\u00a5\u00a8\7\22\2\2\u00a6\u00a8\7\23\2\2\u00a7"+
-		"\u00a5\3\2\2\2\u00a7\u00a6\3\2\2\2\u00a8\37\3\2\2\2\u00a9\u00aa\7\22\2"+
-		"\2\u00aa!\3\2\2\2\u00ab\u00ac\5\34\17\2\u00ac\u00ad\5$\23\2\u00ad\u00b0"+
-		"\3\2\2\2\u00ae\u00b0\3\2\2\2\u00af\u00ab\3\2\2\2\u00af\u00ae\3\2\2\2\u00b0"+
-		"#\3\2\2\2\u00b1\u00b2\7\20\2\2\u00b2\u00b3\5\34\17\2\u00b3\u00b4\5$\23"+
-		"\2\u00b4\u00b7\3\2\2\2\u00b5\u00b7\3\2\2\2\u00b6\u00b1\3\2\2\2\u00b6\u00b5"+
-		"\3\2\2\2\u00b7%\3\2\2\2\u00b8\u00b9\5 \21\2\u00b9\u00ba\5(\25\2\u00ba"+
-		"\u00bd\3\2\2\2\u00bb\u00bd\3\2\2\2\u00bc\u00b8\3\2\2\2\u00bc\u00bb\3\2"+
-		"\2\2\u00bd\'\3\2\2\2\u00be\u00bf\7\20\2\2\u00bf\u00c0\5 \21\2\u00c0\u00c1"+
-		"\5(\25\2\u00c1\u00c4\3\2\2\2\u00c2\u00c4\3\2\2\2\u00c3\u00be\3\2\2\2\u00c3"+
-		"\u00c2\3\2\2\2\u00c4)\3\2\2\2\21,CN[cw\u0080\u008b\u0099\u00a3\u00a7\u00af"+
-		"\u00b6\u00bc\u00c3";
+		"\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\5\3B\n\3\3\4\3"+
+		"\4\3\4\3\4\3\5\3\5\7\5J\n\5\f\5\16\5M\13\5\3\6\3\6\3\6\3\6\3\6\3\6\3\6"+
+		"\3\6\3\6\3\6\5\6Y\n\6\3\7\3\7\3\7\3\7\3\7\3\7\5\7a\n\7\3\b\3\b\3\b\3\b"+
+		"\3\b\3\b\3\t\3\t\3\t\3\t\3\t\3\t\3\t\3\t\3\t\3\t\3\t\3\t\5\tu\n\t\3\n"+
+		"\3\n\3\n\3\n\3\n\7\n|\n\n\f\n\16\n\177\13\n\3\13\3\13\3\13\3\13\3\13\3"+
+		"\13\3\13\3\13\5\13\u0089\n\13\3\f\3\f\3\f\3\f\3\f\3\f\3\f\3\f\3\r\3\r"+
+		"\3\r\3\r\5\r\u0097\n\r\3\16\3\16\3\16\3\16\3\16\3\17\3\17\3\17\5\17\u00a1"+
+		"\n\17\3\20\3\20\5\20\u00a5\n\20\3\21\3\21\3\22\3\22\3\22\3\22\5\22\u00ad"+
+		"\n\22\3\23\3\23\3\23\3\23\3\23\5\23\u00b4\n\23\3\24\3\24\3\24\3\24\5\24"+
+		"\u00ba\n\24\3\25\3\25\3\25\3\25\3\25\5\25\u00c1\n\25\3\25\2\2\26\2\4\6"+
+		"\b\n\f\16\20\22\24\26\30\32\34\36 \"$&(\2\3\4\2\6\6\25\25\2\u00c8\2*\3"+
+		"\2\2\2\4A\3\2\2\2\6C\3\2\2\2\bG\3\2\2\2\nX\3\2\2\2\f`\3\2\2\2\16b\3\2"+
+		"\2\2\20t\3\2\2\2\22v\3\2\2\2\24\u0088\3\2\2\2\26\u008a\3\2\2\2\30\u0096"+
+		"\3\2\2\2\32\u0098\3\2\2\2\34\u00a0\3\2\2\2\36\u00a4\3\2\2\2 \u00a6\3\2"+
+		"\2\2\"\u00ac\3\2\2\2$\u00b3\3\2\2\2&\u00b9\3\2\2\2(\u00c0\3\2\2\2*,\5"+
+		"\4\3\2+-\5\6\4\2,+\3\2\2\2,-\3\2\2\2-.\3\2\2\2./\5\n\6\2/\3\3\2\2\2\60"+
+		"\61\7\3\2\2\61\62\7\21\2\2\62\63\7\25\2\2\63B\5\4\3\2\64\65\7\3\2\2\65"+
+		"\66\7\21\2\2\66B\7\2\2\3\678\5\b\5\289\7\25\2\29:\5\4\3\2:B\3\2\2\2;<"+
+		"\5\b\5\2<=\7\2\2\3=B\3\2\2\2>?\7\25\2\2?B\5\4\3\2@B\3\2\2\2A\60\3\2\2"+
+		"\2A\64\3\2\2\2A\67\3\2\2\2A;\3\2\2\2A>\3\2\2\2A@\3\2\2\2B\5\3\2\2\2CD"+
+		"\7\4\2\2DE\7\22\2\2EF\7\25\2\2F\7\3\2\2\2GK\7\5\2\2HJ\n\2\2\2IH\3\2\2"+
+		"\2JM\3\2\2\2KI\3\2\2\2KL\3\2\2\2L\t\3\2\2\2MK\3\2\2\2NO\5\f\7\2OP\7\25"+
+		"\2\2PQ\5\n\6\2QY\3\2\2\2RS\5\f\7\2ST\7\2\2\3TY\3\2\2\2UV\7\25\2\2VY\5"+
+		"\n\6\2WY\7\2\2\3XN\3\2\2\2XR\3\2\2\2XU\3\2\2\2XW\3\2\2\2Y\13\3\2\2\2Z"+
+		"a\5\16\b\2[a\5\20\t\2\\a\5\b\5\2]a\5\22\n\2^a\5\24\13\2_a\5\26\f\2`Z\3"+
+		"\2\2\2`[\3\2\2\2`\\\3\2\2\2`]\3\2\2\2`^\3\2\2\2`_\3\2\2\2a\r\3\2\2\2b"+
+		"c\7\7\2\2cd\7\22\2\2de\7\b\2\2ef\5\34\17\2fg\5\30\r\2g\17\3\2\2\2hi\7"+
+		"\t\2\2ij\7\22\2\2jk\7\b\2\2kl\5\34\17\2lm\5\30\r\2mu\3\2\2\2no\7\n\2\2"+
+		"op\7\22\2\2pq\7\b\2\2qr\5\34\17\2rs\5\30\r\2su\3\2\2\2th\3\2\2\2tn\3\2"+
+		"\2\2u\21\3\2\2\2vw\7\13\2\2wx\7\22\2\2xy\7\b\2\2y}\5\36\20\2z|\7\26\2"+
+		"\2{z\3\2\2\2|\177\3\2\2\2}{\3\2\2\2}~\3\2\2\2~\23\3\2\2\2\177}\3\2\2\2"+
+		"\u0080\u0081\7\f\2\2\u0081\u0082\5\36\20\2\u0082\u0083\7\21\2\2\u0083"+
+		"\u0089\3\2\2\2\u0084\u0085\7\f\2\2\u0085\u0086\5\36\20\2\u0086\u0087\7"+
+		"\26\2\2\u0087\u0089\3\2\2\2\u0088\u0080\3\2\2\2\u0088\u0084\3\2\2\2\u0089"+
+		"\25\3\2\2\2\u008a\u008b\7\r\2\2\u008b\u008c\7\22\2\2\u008c\u008d\7\16"+
+		"\2\2\u008d\u008e\5&\24\2\u008e\u008f\7\17\2\2\u008f\u0090\7\b\2\2\u0090"+
+		"\u0091\5\30\r\2\u0091\27\3\2\2\2\u0092\u0093\5\34\17\2\u0093\u0094\5\30"+
+		"\r\2\u0094\u0097\3\2\2\2\u0095\u0097\3\2\2\2\u0096\u0092\3\2\2\2\u0096"+
+		"\u0095\3\2\2\2\u0097\31\3\2\2\2\u0098\u0099\5\36\20\2\u0099\u009a\7\16"+
+		"\2\2\u009a\u009b\5\"\22\2\u009b\u009c\7\17\2\2\u009c\33\3\2\2\2\u009d"+
+		"\u00a1\5\32\16\2\u009e\u00a1\7\21\2\2\u009f\u00a1\5\36\20\2\u00a0\u009d"+
+		"\3\2\2\2\u00a0\u009e\3\2\2\2\u00a0\u009f\3\2\2\2\u00a1\35\3\2\2\2\u00a2"+
+		"\u00a5\7\22\2\2\u00a3\u00a5\7\23\2\2\u00a4\u00a2\3\2\2\2\u00a4\u00a3\3"+
+		"\2\2\2\u00a5\37\3\2\2\2\u00a6\u00a7\7\22\2\2\u00a7!\3\2\2\2\u00a8\u00a9"+
+		"\5\34\17\2\u00a9\u00aa\5$\23\2\u00aa\u00ad\3\2\2\2\u00ab\u00ad\3\2\2\2"+
+		"\u00ac\u00a8\3\2\2\2\u00ac\u00ab\3\2\2\2\u00ad#\3\2\2\2\u00ae\u00af\7"+
+		"\20\2\2\u00af\u00b0\5\34\17\2\u00b0\u00b1\5$\23\2\u00b1\u00b4\3\2\2\2"+
+		"\u00b2\u00b4\3\2\2\2\u00b3\u00ae\3\2\2\2\u00b3\u00b2\3\2\2\2\u00b4%\3"+
+		"\2\2\2\u00b5\u00b6\5 \21\2\u00b6\u00b7\5(\25\2\u00b7\u00ba\3\2\2\2\u00b8"+
+		"\u00ba\3\2\2\2\u00b9\u00b5\3\2\2\2\u00b9\u00b8\3\2\2\2\u00ba\'\3\2\2\2"+
+		"\u00bb\u00bc\7\20\2\2\u00bc\u00bd\5 \21\2\u00bd\u00be\5(\25\2\u00be\u00c1"+
+		"\3\2\2\2\u00bf\u00c1\3\2\2\2\u00c0\u00bb\3\2\2\2\u00c0\u00bf\3\2\2\2\u00c1"+
+		")\3\2\2\2\21,AKX`t}\u0088\u0096\u00a0\u00a4\u00ac\u00b3\u00b9\u00c0";
 	public static final ATN _ATN =
 		new ATNDeserializer().deserialize(_serializedATN.toCharArray());
 	static {

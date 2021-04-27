@@ -1,14 +1,16 @@
+import java.util.HashMap;
+import java.util.List;
+
 public class FuncTerm extends Term {
-    public Terms arguments;
+    public List<Term> arguments;
 
-    public FuncTerm(String id, Terms terms) {
-        super(Type.FUNCTION, id);
-        arguments = terms;
-    }
-
-    public FuncTerm(String id, Terms terms, String ns) {
+    public FuncTerm(String id, List<Term> args, String ns) {
         super(Type.FUNCTION, id, ns);
-        arguments = terms;
+        if (args == null) {
+            System.out.println("FuncTerm was passed null arguments");
+            System.exit(1);
+        }
+        arguments = args;
     }
 
     @Override public String toString() {
@@ -24,5 +26,10 @@ public class FuncTerm extends Term {
         b.append('}');
         return b.toString();
 
+    }
+
+    @Override public String getRawString(HashMap<String, SymbolTable> namespaces) {
+        FuncTerms terms = (FuncTerms)namespaces.get(namespace).variables.get(id);
+        return terms.getRawString(namespaces, arguments);
     }
 }

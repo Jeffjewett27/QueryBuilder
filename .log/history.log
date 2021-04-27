@@ -968,3 +968,626 @@ CompilationStatus (AEW): 0 0 0
 CompilationStatus (AEW): 0 0 0
 --[ 2021.04.25.19.23.23.739.0 ]--
 CompilationStatus (AEW): 0 0 0
+--[ 2021.04.26.15.27.00.732.0 ]--
+NewLogger: QueryBuilder
+Version: 1.4
+--[ 2021.04.26.15.27.00.837.0 ]--
+InitTree:
+/out/production/RegexTool/grammar/regexTool.g4
+/out/production/RegexTool/grammar/regexTool.interp
+/out/production/RegexTool/grammar/regexTool.tokens
+/out/production/RegexTool/grammar/regexToolLexer.class
+/out/production/RegexTool/grammar/regexToolLexer.interp
+/out/production/RegexTool/grammar/regexToolLexer.tokens
+/out/production/RegexTool/grammar/regexToolParser.class
+/out/production/RegexTool/grammar/regexToolVisitor.class
+/out/production/RegexTool/grammar/regexToolListener.class
+/out/production/RegexTool/grammar/regexToolBaseVisitor.class
+/out/production/RegexTool/grammar/regexToolBaseListener.class
+/out/production/RegexTool/grammar/regexToolParser$TermContext.class
+/out/production/RegexTool/grammar/regexToolParser$ParamContext.class
+/out/production/RegexTool/grammar/regexToolParser$StartContext.class
+/out/production/RegexTool/grammar/regexToolParser$ArgHeadContext.class
+/out/production/RegexTool/grammar/regexToolParser$CommentContext.class
+/out/production/RegexTool/grammar/regexToolParser$ImportsContext.class
+/out/production/RegexTool/grammar/regexToolParser$VarTermContext.class
+/out/production/RegexTool/grammar/regexToolParser$ArgEmptyContext.class
+/out/production/RegexTool/grammar/regexToolParser$Arg_listContext.class
+/out/production/RegexTool/grammar/regexToolParser$FuncTermContext.class
+/out/production/RegexTool/grammar/regexToolParser$VarIdentContext.class
+/out/production/RegexTool/grammar/regexToolParser$VariableContext.class
+/out/production/RegexTool/grammar/regexToolParser$Func_callContext.class
+/out/production/RegexTool/grammar/regexToolParser$Func_stmtContext.class
+/out/production/RegexTool/grammar/regexToolParser$NamespaceContext.class
+/out/production/RegexTool/grammar/regexToolParser$QuoteTermContext.class
+/out/production/RegexTool/grammar/regexToolParser$StatementContext.class
+/out/production/RegexTool/grammar/regexToolParser$Term_listContext.class
+/out/production/RegexTool/grammar/regexToolParser$Test_stmtContext.class
+/out/production/RegexTool/grammar/regexToolParser$Build_stmtContext.class
+/out/production/RegexTool/grammar/regexToolParser$Label_stmtContext.class
+/out/production/RegexTool/grammar/regexToolParser$Param_listContext.class
+/out/production/RegexTool/grammar/regexToolParser$StatementsContext.class
+/out/production/RegexTool/grammar/regexToolParser$VarNSIdentContext.class
+/out/production/RegexTool/grammar/regexToolParser$ArgListDoneContext.class
+/out/production/RegexTool/grammar/regexToolParser$ArgListTailContext.class
+/out/production/RegexTool/grammar/regexToolParser$Capture_stmtContext.class
+/out/production/RegexTool/grammar/regexToolParser$Arg_list_tailContext.class
+/out/production/RegexTool/grammar/regexToolParser$Param_list_tailContext.class
+/out/production/RegexTool/Term.class
+/out/production/RegexTool/Test.class
+/out/production/RegexTool/Terms.class
+/out/production/RegexTool/FuncTerm.class
+/out/production/RegexTool/Term$Type.class
+/out/production/RegexTool/QueryBuilder.class
+/out/production/RegexTool/queryBuilderListener.class
+/src/grammar/regexTool.g4
+/src/grammar/regexTool.interp
+/src/grammar/regexTool.tokens
+/src/grammar/regexToolLexer.java
+/src/grammar/regexToolParser.java
+/src/grammar/regexToolLexer.interp
+/src/grammar/regexToolLexer.tokens
+/src/grammar/regexToolVisitor.java
+/src/grammar/regexToolListener.java
+/src/grammar/regexToolBaseVisitor.java
+/src/grammar/regexToolBaseListener.java
+/src/Term.java
+/src/Test.java
+/src/Terms.java
+/src/FuncTerm.java
+/src/QueryBuilder.java
+/src/queryBuilderListener.java
+/.git/info/exclude
+/.git/logs/refs/heads/master
+/.git/logs/refs/remotes/origin/HEAD
+/.git/logs/refs/remotes/origin/master
+/.git/logs/HEAD
+/.git/refs/heads/master
+/.git/refs/remotes/origin/HEAD
+/.git/refs/remotes/origin/master
+/.git/hooks/update.sample
+/.git/hooks/pre-push.sample
+/.git/hooks/commit-msg.sample
+/.git/hooks/pre-commit.sample
+/.git/hooks/pre-rebase.sample
+/.git/hooks/post-update.sample
+/.git/hooks/pre-receive.sample
+/.git/hooks/applypatch-msg.sample
+/.git/hooks/pre-applypatch.sample
+/.git/hooks/pre-merge-commit.sample
+/.git/hooks/fsmonitor-watchman.sample
+/.git/hooks/prepare-commit-msg.sample
+/.git/objects/07/6d334d0a4035957040c810b5a8630cc3763afb
+/.git/objects/08/a6400d7b14f98b69b7bde30b7c9fdb8cfe3a4f
+/.git/objects/09/492b5f1b16f41efce1d9deefe0c53658c7437d
+/.git/objects/09/a9c2d97634bb0510206f6ecdb85fc2dd52d529
+/.git/objects/0a/bac162b0dfb6f5448111228a8699751c065b9c
+/.git/objects/0a/e8b22dd025c97f0d1dfd23f083f38777ed5c27
+/.git/objects/0b/34accb972c814d05576d35654167903f5b3a7f
+/.git/objects/0f/43eee47cfaf3d6061635c28f6c7ac8773bb7b4
+/.git/objects/10/53f3fa93605a03e9a7fe7fd3daeea4158d7671
+/.git/objects/10/fd7ad4c679a29faf5d270a0199c0667d820520
+/.git/objects/13/023b2c1e877a0e45b8568c7a9879164afcb5c0
+/.git/objects/13/108d66264b2136aed8fed174f085d3f7dc7293
+/.git/objects/14/1fc65906f790347be8a45e1056a6f1ff19ae5d
+/.git/objects/15/f55c9db690ccf9789ec140ee8f2f181db2193f
+/.git/objects/16/e60dbe0dd29053c6ef29715fc4a276b45d91ea
+/.git/objects/17/6b232d2d305225b2b4be89b364c063a15fb5e2
+/.git/objects/1d/9ac87882e9b3160bca6ac40a86547eb8da64ea
+/.git/objects/1e/b44eb17c6139aa3f4f2f9464cdae17dfaef50e
+/.git/objects/20/2a9ff7dbd5e9995abb0c5986cbcb8442344803
+/.git/objects/21/2c264f79bd72e57477f149930f8d7d8a12b498
+/.git/objects/21/cb9b8e465a236168b9d4af2bc3922d5aadccf8
+/.git/objects/23/e294df8fc7cab170aab915d799c81d24217fd3
+/.git/objects/23/ee9a01db719eb63d556465464f5c6ad4497829
+/.git/objects/26/d33521af10bcc7fd8cea344038eaaeb78d0ef5
+/.git/objects/27/9ef35f921424e154cd0cd0e02ac5a6bc2be86a
+/.git/objects/2d/bd69c724224e7174d782974efef1de55b21b62
+/.git/objects/2e/96bb941c9e63ebb7c0e19db10c0b061211c1e7
+/.git/objects/34/b21bd0dfb4d1b47e7cdfe22f29323fd3b513d1
+/.git/objects/35/eb1ddfbbc029bcab630581847471d7f238ec53
+/.git/objects/36/17880a177b0e91e08cde405c257133f21b5aa6
+/.git/objects/38/4042fba8ea3ab86f55bf76f691086b24341016
+/.git/objects/3a/05b0172220a0fe7574116750fd4c79b42ed12e
+/.git/objects/3a/60f9d19ad8a0171d5b77efb41aeb58d3aec4eb
+/.git/objects/3a/9233724fae4e8d2c5b2cdad2c5a62c54ba9852
+/.git/objects/3c/371e3065df9edae856a68d288f0c3d79dd576b
+/.git/objects/3e/9db0b14ca7e76eebb436092a4f6b1e4bf5f0e0
+/.git/objects/3e/eeea9ca5f0481b16fa0eae590b3e38b70d77e6
+/.git/objects/40/7d8acfa311fb47bc531168bc9f0ad3c387b36e
+/.git/objects/41/27aed84cf20f4980cf87c672ae87c3a5dd46ef
+/.git/objects/41/8ac839f471d53ea1fc510d7e42dc24dfa84452
+/.git/objects/44/a9cc49c5ec3e8b533ce89baf53cb5f643dd913
+/.git/objects/45/fc23b527650e951d9124ab0a181095b0bdbe8d
+/.git/objects/47/029dae0fbaeea06d46446bb7e077fbc95d92db
+/.git/objects/47/6dc71dc2c26fd4490b27764ddd21178cd8957a
+/.git/objects/47/780e8800dfe90881fe93c839ccb010a35bc0e3
+/.git/objects/49/027ba4fb1f1327fd156089a21b885607ead543
+/.git/objects/4c/aa35fed2f73ed1b4f81330d65fa0fec2544821
+/.git/objects/4e/ab3dbfca7437173499338ccb65120c34106f48
+/.git/objects/4f/ef43857a2a2acab44d5412f1313ec42fc03fc6
+/.git/objects/50/95aa60b05b538e79d1bd5f007810dea1a4d86c
+/.git/objects/51/71753f10d5125840f1b293446a85de0f2869af
+/.git/objects/52/1501c4e89df2edd9c674a7a53e2fb0a5c424d4
+/.git/objects/56/80c8c468a9d18a9dcb2469a2e8458c1585c5bb
+/.git/objects/57/404add8aa726c1a1b1c325b1357fd4e0c07cf4
+/.git/objects/57/64e6cfb8618676a0a69f61fadb37f83a3671ad
+/.git/objects/57/b30cda900445e47554737f76cd5ccb4b272f69
+/.git/objects/58/db23f6a97850e3a5ab9cc0a69e89c6e2d81630
+/.git/objects/5b/69b4eb4eba136cb95df2191140ae9c8cc83596
+/.git/objects/65/b866b725d50d074f6626a1144c16265b0a88e0
+/.git/objects/66/e3c07322f9a376ddc0a221663ea29d4ad0fd05
+/.git/objects/67/e6d7353b1fa29803d024af9e222033de6280da
+/.git/objects/69/52b74f5f81090620e9b18a10d1e7b5250f40ad
+/.git/objects/6a/9a24448ab37f256052c8c5b7d21a14435d43e4
+/.git/objects/6d/62c8acfe005ee872b9dd7c04c52a8fb84f3cbb
+/.git/objects/6f/8292e8db3191d6e6caa9aef1dd7e23b64ae52d
+/.git/objects/6f/b05381914f01f4bdfa05b8adc3913b5daec088
+/.git/objects/70/5e3c7b9155ee3354ab4ae422036e2da1b0fae7
+/.git/objects/71/35dfdd9d6c9007bdf0b5eaffbb51a94ba2180b
+/.git/objects/71/b5e74d69fafe1b0147be558ed8e4c83809864e
+/.git/objects/79/62ed1e0b391b5d4c9796c0ebb6acdb1f27067b
+/.git/objects/79/aebc272d9ddc0635229c9afd6b9e9f9878cf25
+/.git/objects/7b/2cd3af78478369a96c53b425fbe8150b7e468a
+/.git/objects/7b/bd8f1f11244bee12304f89acf9d12a2b12595e
+/.git/objects/80/10e30c1d451603705cfff60c7caac0be0f702d
+/.git/objects/83/06bdf87c47c65fdf9eeae6718bb87a81dc3d0b
+/.git/objects/89/1bab16c9191f63a1a9fcd2b7565a29d229fffb
+/.git/objects/89/a7d92ca7c3226001aa315b9411335c96a6a2cf
+/.git/objects/8c/df4baeeb05f32a68e806ffd8a787f6e3ad9df8
+/.git/objects/8d/742e4959253fcb09853055715b82f13ab8376b
+/.git/objects/8d/7a937cc9175a51b218d918acc4f5742ea2211d
+/.git/objects/8e/3eb9f05f039b6cae21dd187bf26d3c953f2ba4
+/.git/objects/8f/31aaf77db36f20a11b9f721839503f87a4bab7
+/.git/objects/91/bd0bf351a2e29ec7be1c0b937da429048ee5da
+/.git/objects/92/4ca6f27479bd05492e70dae92c15c54d01084d
+/.git/objects/93/1d1344233efae4f04fb7496ce05b6158045240
+/.git/objects/93/689db25d1b154cdc3f831dcadaf70db4bbd6be
+/.git/objects/96/1e084562ba8e8216e439c6c4f2af1e7507b9e3
+/.git/objects/96/33c9d79128d882862922177824338dc107396a
+/.git/objects/9a/ad396b9799c09fe031224f5af9376459b323f7
+/.git/objects/9d/7b11f9f37feed4aef1ed69a1522dd19da01439
+/.git/objects/a3/52a5c51fd249ee1c5ccbb26a64507ab034e922
+/.git/objects/a3/64d6b0627a99574e93474e64bbacf09a2de006
+/.git/objects/a4/445593e573e220e3a186b5c56903a1f6795371
+/.git/objects/a4/8f46fa3893ad4806a69bdef5b77dedd8aa96a4
+/.git/objects/a5/3009e62f28984aa7c62704348886f7efa5deab
+/.git/objects/a5/62e6684c37f11948119b24a1b5f8b59d16c85d
+/.git/objects/a5/ebd475ab9177e69045517f300d0f97b0f9c8f4
+/.git/objects/a8/415f1690021314d46f4677356ad57fa3e9b486
+/.git/objects/a8/85e4d234f59139bd282be6f48bb838b88f22bc
+/.git/objects/a9/600ff319bb36f3f9fe31a77bb61f61ddbf6537
+/.git/objects/aa/4f087e6f5a6354d7211ae55398b9fc6ad04018
+/.git/objects/aa/b23a8ca7e0d23c80ef48d781c36071635a5e7d
+/.git/objects/ac/6f200bd8c8c657f9ebd0ea5ef31cee1b8280e3
+/.git/objects/b2/02f7912059c84c18c5a1970437e89177747f92
+/.git/objects/b6/4a874b22dc4c89e5ca41f16863556d145a86b9
+/.git/objects/b7/56a7b703145cba11924070cd24e44bfa70b042
+/.git/objects/b8/1e6f2d91f993ee1b189bf280e02e15de82b052
+/.git/objects/c0/1ad191735080744d0edaf20a53ab94a9581a0a
+/.git/objects/c0/44115275bc1d4c719650cbcadfcddd8f106f5d
+/.git/objects/c3/0969db48acfa344961b72320f0fe19443881bb
+/.git/objects/cb/1ffc563b5eb0cb1078fc46a9748b9e86f902f1
+/.git/objects/cd/77145916ca02a15c1c34918d162936dfa572df
+/.git/objects/d2/9186d54148a1a385fc9c35e99cb20d94d708ea
+/.git/objects/d2/dabc9f098e68cbfd6cae5185260362287bffaa
+/.git/objects/d6/88bdf090f33efb9eee4ba112e63c3180ab968f
+/.git/objects/d7/baaf98ee9d27a12ce91210d9408326fb133d18
+/.git/objects/d7/bf1cd9ab1d40eeee0111203ad21da76cc2e00d
+/.git/objects/da/827f99efd2c8454b77933c7592a53161145a3f
+/.git/objects/db/fc5f3c5d22672729922399f79b2a43eb686b89
+/.git/objects/e0/f1690f1c846f54d0585d39516fc38362887116
+/.git/objects/e1/f13a1e229552234d748fe3709652dab26de626
+/.git/objects/e4/9ec2a13cba8a52b3c4aeaf21f67d992086a973
+/.git/objects/e6/9de29bb2d1d6434b8b29ae775ad8c2e48c5391
+/.git/objects/e6/d03e7501a7785e9c1a37e914caa7086857691e
+/.git/objects/eb/d043239ea5df012f286f093c91122ef0733d37
+/.git/objects/ec/da5ff2de24e15c2ae66015e7ca821df5b39a90
+/.git/objects/f1/46ffc23673fbb78edb77ac6a31552898edda4e
+/.git/objects/f4/2ecb2c57953aa1b5c8b780724be65b136fd1b9
+/.git/objects/f4/98197ba16b74a243a1d4ae79e18601fa04eaed
+/.git/objects/f4/9d68fc2735b83f3773124797b8d3c2a8651dc6
+/.git/objects/f5/067d38a31789dd335536bd00a3f493e19adfd4
+/.git/objects/f5/84d821afe63c1ec493bec249ef475288861de8
+/.git/objects/f7/dbbeec58291e1a509e97f385296c2c105d085e
+/.git/objects/fa/d924d888b762dbdb579595ffe4287a8dc6f6fc
+/.git/objects/fb/7e821faff6c4545fb7618d55961bfd47371aa1
+/.git/objects/fb/e2ae79e1297ba0cbde91fc8eb8d89b13ef208f
+/.git/objects/fc/aeea9be330fcfa277027acab777ab9ebd54d71
+/.git/objects/fe/8712fd06e154dee3d85e84b0e947df98451add
+/.git/objects/ff/fb2c26a80bd3b6c82a1e8df60b29838d786f7d
+/.git/HEAD
+/.git/index
+/.git/config
+/.git/ORIG_HEAD
+/.git/FETCH_HEAD
+/.git/description
+/.git/packed-refs
+/.git/COMMIT_EDITMSG
+/.log/history.log
+/test/bad1.qb
+/test/bad2.qb
+/test/bad3.qb
+/test/bad4.qb
+/test/good1.qb
+/test/good2.qb
+/test/good3.qb
+/test/good4.qb
+/test/good5.qb
+/test/good6.qb
+/test/test1.txt
+/test/test2.txt
+/.idea/libraries/antlr_runtime_4_9_1.xml
+/.idea/vcs.xml
+/.idea/misc.xml
+/.idea/.gitignore
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/uiDesigner.xml
+/asset1.png
+/readme.html
+/RegexTool.iml
+
+--[ 2021.04.26.15.28.57.127.0 ]--
+UpdateTree (AD): 64 0
++ /.git/objects/00/d85791bdce2b6eeb40a8f835acee4df2efd457
++ /.git/objects/02/f00dbc4ff26264507ff241f62890b7a531e088
++ /.git/objects/06/d755757c98bcef0f65b399019580057edfe62d
++ /.git/objects/0d/8b90b3e76a171ec06fc75b69626d1196c6f41e
++ /.git/objects/0e/8b339ac67b09453d7b6b0f2f2487b9d1bfdd78
++ /.git/objects/0f/392d46689a25fb09b0fe4d351023307a7412b5
++ /.git/objects/14/cb3aed19276279ef95ebe97869def19fbeda33
++ /.git/objects/18/d75999649b27c383f5a29f828e5e711adb0697
++ /.git/objects/1d/8cb3b5041fec64446e847dd2bef653acd005ec
++ /.git/objects/1d/e6558ab8b486321cdb22b882c8e95a52478d79
++ /.git/objects/22/fc24a3322e1117967579c08bec0db78c61ebc0
++ /.git/objects/3b/7f7fa5871b974c3bd8562679f454a30369b3b4
++ /.git/objects/3d/45a109bccafc5f8983ee3a5a2c3389e1251bc3
++ /.git/objects/3f/9d3ec0ad6c3f3932ebe0ae74132890866a9443
++ /.git/objects/47/7556705d37d0d46c9017c406093c4bbaa79f1a
++ /.git/objects/47/9bcc5852dd4e904fd9f22186ecfb250fba693a
++ /.git/objects/51/60b76513790a59d69d48e41653a40244571466
++ /.git/objects/58/540f53a92e8d2f192538a08a0ee732da901a07
++ /.git/objects/5b/8c32d9a76e27cea7e2289d7ee6fcac29e93fbc
++ /.git/objects/5c/a680d0113aca8fd10b1350c4b73553a9b33782
++ /.git/objects/5d/60444c4daef3c4a39530c27e3660ad2020b6c9
++ /.git/objects/64/2b10d47aa0bc8b66fa2f7a60e413a386d3815c
++ /.git/objects/66/10d516010448d2ed2508486f279b7bf77fa8b4
++ /.git/objects/67/cf24d7959b2a05e1de3807a9d7b11c149fa0f1
++ /.git/objects/69/be99c60b9ea47d374de66cf5e5cb1f216e3ac0
++ /.git/objects/70/a53ed90e536fc64473777f85a63fb777cd2fd7
++ /.git/objects/78/3419b869e054c3044e3f0c74e553ca222b3fab
++ /.git/objects/7c/c1ee3c87fa1808f163af32bf4a78af88c89935
++ /.git/objects/7e/052e9d3fc5e602a856834782dd63fee148cbc9
++ /.git/objects/86/5fe82da37e55b4c13b7e6110adfbeaff0e894a
++ /.git/objects/87/7c98b138edab4ad2a7de37fe183f3c2f4f5a5f
++ /.git/objects/88/563964c225cb71d76dfd52a1b100583c03b41f
++ /.git/objects/91/79e512bd014fd5a2b1d135aae5aca38c71ad8b
++ /.git/objects/92/4eef594312339c5f1e4fde44e2b145ce3f6271
++ /.git/objects/94/cf803cbd7547c0f90a0617c7feddf1dcb906ca
++ /.git/objects/98/526387667cb4690fdd4d90b4fc325e7b2c8918
++ /.git/objects/a1/007a27a2b322b012b9c9eaecf1a58ab8fd20c6
++ /.git/objects/a1/6d04f1e55e1d9f7f799496ff753d76f0158f99
++ /.git/objects/a5/cd042227ea58078ece2ed4fafad56c072a4afe
++ /.git/objects/ab/109d68ac2da3e1eced28067d7c3b540c8e5bc8
++ /.git/objects/ac/2c6111b281b9ce080cfb85bd3f9038499d089a
++ /.git/objects/ac/5bde80d42ae20e435b58b514677de374d272fa
++ /.git/objects/ad/2f7d6f235e270b04c9a925183168580a9ce571
++ /.git/objects/ae/fdad98b04b8dcc411d52047d9976c2c625dc38
++ /.git/objects/b0/b98900a301aad3260f90bbefecb62b849ad528
++ /.git/objects/b6/88caa2542fe0957a7420b3e39a6817bfdf48e5
++ /.git/objects/b6/af0ddb3bb97cfff113c452b5290fc8342ab6db
++ /.git/objects/bb/cb3e1e2736d60115fb35ba7422adebf14175eb
++ /.git/objects/bc/cd4c1c95aef0fc085461a84bd224b6dec75dfb
++ /.git/objects/c6/5e611ab65a3867b1d2e0047cb6c029187e3037
++ /.git/objects/cb/2250d9269882219a4156510efb8c1e197f72ae
++ /.git/objects/d0/bd0b7310079490119349b9fea2bac3e2d7ee57
++ /.git/objects/d1/e4912d768fe7cc9a4a9b753cac55f2005140b1
++ /.git/objects/e5/5f06c5a37570aa5aa20cf7209a3344a3c11411
++ /.git/objects/e6/727f09be42c39c7d5c085f6573eb618b7ccd2a
++ /.git/objects/e6/8b71d6b3c7822497f4902173a826417e624dcb
++ /.git/objects/e9/6534fb27b68192f27f985d3879e173ec77adb8
++ /.git/objects/ed/2999e31a51e07d8402b17b63f694602f3ce6ff
++ /.git/objects/f1/d49b9f5fa74ae7dc940fdc5735de6d7b829e90
++ /.git/objects/f2/630ae732163a9252e6478468fd701c573b06b3
++ /.git/objects/f7/98e41abec8f81bddc391dbe5b2f1d75911f02c
++ /.git/objects/f8/362637dea939853b14f8c6552f06764ec35e2c
++ /.git/objects/f8/c2a163be4c682d4c1042a68df9c60c88768473
++ /.git/objects/fd/d70b9493d0eef948aaa90a36155b6174abfbb1
+
+--[ 2021.04.26.15.28.57.131.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.26.15.37.26.905.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.26.15.39.34.570.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.26.15.39.56.278.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.26.15.44.33.315.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.26.15.48.38.113.0 ]--
+UpdateTree (AD): 6 0
++ /out/production/RegexTool/grammar/regexToolParser$ImportFEContext.class
++ /out/production/RegexTool/grammar/regexToolParser$ImportLEContext.class
++ /out/production/RegexTool/grammar/regexToolParser$ImportEndContext.class
++ /out/production/RegexTool/grammar/regexToolParser$ImportEmptyContext.class
++ /out/production/RegexTool/grammar/regexToolParser$ImportCommentFEContext.class
++ /out/production/RegexTool/grammar/regexToolParser$ImportCommentLEContext.class
+
+--[ 2021.04.26.15.51.00.082.0 ]--
+UpdateTree (AD): 1 0
++ /src/VarTerm.java
+
+--[ 2021.04.26.15.54.29.713.0 ]--
+UpdateTree (AD): 1 0
++ /src/QuoteTerm.java
+
+--[ 2021.04.26.15.59.29.672.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.26.15.59.30.646.0 ]--
+UpdateTree (AD): 2 0
++ /out/production/RegexTool/VarTerm.class
++ /out/production/RegexTool/QuoteTerm.class
+
+--[ 2021.04.26.16.01.26.179.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.26.16.02.18.270.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.26.16.03.01.262.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.26.16.03.50.428.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.26.16.08.46.593.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.26.16.09.32.769.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.26.16.10.25.611.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.26.16.11.17.632.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.26.16.11.58.274.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.26.16.12.23.939.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.26.16.23.52.684.0 ]--
+UpdateTree (AD): 1 0
++ /src/FuncTerms.java
+
+--[ 2021.04.26.16.49.03.752.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.26.16.49.42.065.0 ]--
+UpdateTree (AD): 1 0
++ /out/production/RegexTool/FuncTerms.class
+
+--[ 2021.04.26.16.50.42.187.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.26.16.51.37.781.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.26.16.58.37.288.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.26.17.00.02.374.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.26.17.00.15.900.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.26.17.00.35.502.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.26.17.39.30.045.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.26.17.41.29.958.0 ]--
+UpdateTree (AD): 1 0
++ /src/BuildTerms.java
+
+--[ 2021.04.26.17.48.50.029.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.26.17.49.26.798.0 ]--
+UpdateTree (AD): 1 0
++ /out/production/RegexTool/BuildTerms.class
+
+--[ 2021.04.26.17.50.55.956.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.26.17.52.02.733.0 ]--
+UpdateTree (AD): 1 0
++ /test/fencepost.qb
+
+--[ 2021.04.26.17.52.46.109.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.26.17.54.40.137.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.26.17.54.58.680.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.26.17.55.16.647.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.26.17.55.58.180.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.26.17.57.20.302.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.26.17.57.36.053.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.26.17.57.46.876.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.26.17.58.13.496.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.26.17.58.49.550.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.26.18.02.14.883.0 ]--
+UpdateTree (AD): 1 0
++ /src/SymbolTable.java
+
+--[ 2021.04.26.18.13.30.527.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.26.18.13.44.659.0 ]--
+UpdateTree (AD): 1 0
++ /out/production/RegexTool/SymbolTable.class
+
+--[ 2021.04.26.18.15.02.682.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.26.18.15.35.926.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.26.18.16.14.056.0 ]--
+UpdateTree (AD): 0 1
+- /src/BuildTerms.java
+
+--[ 2021.04.26.18.18.32.344.0 ]--
+UpdateTree (AD): 0 1
+- /out/production/RegexTool/BuildTerms.class
+
+--[ 2021.04.26.18.18.32.348.0 ]--
+CompilationStatus (AEW): 0 0 2
+[Ljava.lang.String;@691ad711
+--[ 2021.04.26.18.22.10.583.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.26.18.22.32.782.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.26.18.22.38.279.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.26.18.22.57.153.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.26.18.23.36.540.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.26.18.25.08.260.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.26.18.26.00.126.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.26.18.26.21.755.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.26.18.28.13.007.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.26.18.28.32.365.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.26.18.29.43.921.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.26.18.31.34.538.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.26.18.31.55.754.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.26.18.33.23.381.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.26.18.34.42.219.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.26.18.34.48.419.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.26.18.35.05.913.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.26.18.37.38.861.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.26.18.51.39.899.0 ]--
+UpdateTree (AD): 1 0
++ /test/inputfile.txt
+
+--[ 2021.04.26.18.52.16.637.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.26.18.52.24.508.0 ]--
+UpdateTree (AD): 2 0
++ /out/production/RegexTool/grammar/regexToolParser$TestConstContext.class
++ /out/production/RegexTool/grammar/regexToolParser$TestQuoteContext.class
+
+--[ 2021.04.26.18.52.40.036.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.26.18.52.53.941.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.26.18.53.23.638.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.26.18.58.54.912.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.26.18.59.11.569.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.26.18.59.42.491.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.26.19.01.52.797.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.26.19.02.58.757.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.26.19.03.09.249.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.26.19.04.17.534.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.26.19.13.29.321.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.26.19.13.58.266.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.26.19.14.46.451.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.26.19.15.10.958.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.26.19.16.03.527.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.26.19.24.45.427.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.26.19.25.17.486.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.26.19.25.40.518.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.26.19.27.45.576.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.26.19.28.30.891.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.26.19.29.48.080.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.26.19.32.22.353.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.26.19.32.43.592.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.26.19.32.52.965.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.26.19.34.58.184.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.26.19.35.13.056.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.26.19.36.27.943.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.26.19.37.35.457.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.26.19.37.53.645.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.26.19.38.18.557.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.26.19.39.13.048.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.26.19.40.26.574.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.26.19.42.16.876.0 ]--
+UpdateTree (AD): 1 0
++ /result1.png
+
+--[ 2021.04.26.19.42.41.851.0 ]--
+UpdateTree (AD): 0 1
+- /result1.png
+
+--[ 2021.04.26.19.43.37.235.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.26.19.44.21.524.0 ]--
+UpdateTree (AD): 1 0
++ /result1.png
+
+--[ 2021.04.26.19.46.33.933.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.26.19.48.15.254.0 ]--
+UpdateTree (AD): 1 0
++ /result2.png
+
+--[ 2021.04.26.19.54.47.331.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.26.19.56.18.259.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.26.20.00.56.770.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.26.20.01.11.805.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.26.20.01.33.756.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.26.20.01.52.112.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.26.20.02.14.233.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.26.20.12.05.901.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.26.20.12.20.883.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.26.20.12.59.036.0 ]--
+CompilationStatus (AEW): 0 0 0
+--[ 2021.04.26.20.16.09.819.0 ]--
+UpdateTree (AD): 1 0
++ /result3.png
+
+--[ 2021.04.26.20.26.48.524.0 ]--
+DisposeComponent

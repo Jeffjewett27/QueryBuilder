@@ -1,7 +1,13 @@
-import './test.qb'
+import 'test/good3.qb'
 #import the file
 
-label ex = 'ex'
-label concat = '?'
+namespace thisns
 
-function concat (a,b) = a b
+label ex = 'ex'
+label test2 = '?'
+
+function concat (a,b) = a "(?>" b a ")*"
+
+label ftest = concat('g', 'h')
+
+build out = ftest @GM
