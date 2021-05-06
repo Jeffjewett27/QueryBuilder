@@ -112,7 +112,9 @@ capture
 
 `capture` automatically adds a named cpature group to the stored expression (the variable name is used for this name).
 
-Example: `capture fullName = firstName "\s" lastName`
+`capture[]` can instead be used if you want to see the number of each group when using `test`.
+
+Example: `capture fullName = firstName "\s" lastName` `capture[] numberedFoo = "foo"`
 
 build
 -----------
@@ -150,8 +152,8 @@ File 1: fullnameList.qb
 namespace fn
 
 label firstname = "[a-zA-z]+"
-capture lastname = "[a-zA-z]+"
-label fullname = firstname "\s" lastname
+label lastname = "[a-zA-z]+"
+capture fullname = firstname "\s" lastname
 
 function fencepost(x,y) = x "(?>" y x ")*"
 label namelist = fencepost(fullname, ",\s")
@@ -165,7 +167,7 @@ File 2: mailingList.qb
 import "fullnameList.qb"
 namespace test
 
-label capture[] email = "[\w\.]*@\w*.\w*"
+capture[] email = "[\w\.]*@\w*.\w*"
 label emailList = fn.fencepost(email, ",\s")
 build output = emailList
 

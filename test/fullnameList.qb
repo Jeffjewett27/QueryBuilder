@@ -1,8 +1,8 @@
 namespace fn
 
 label firstname = "[a-zA-z]+"
-capture lastname = "[a-zA-z]+"
-label fullname = firstname "\s" lastname
+label lastname = "[a-zA-z]+"
+capture fullname = firstname "\s" lastname
 
 function fencepost(x,y) = x "(?>" y x ")*"
 label namelist = fencepost(fullname, ",\s")
