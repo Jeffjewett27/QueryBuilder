@@ -22,10 +22,10 @@ public class Terms {
         return b.toString();
     }
 
-    public String getRawString(HashMap<String, SymbolTable> namespaces) {
+    public String getRawString(HashMap<String, SymbolTable> namespaces, BuildContext buildContext) {
         StringBuilder b = new StringBuilder();
         for (Term t : terms) {
-            b.append(t.getRawString(namespaces));
+            b.append(t.getRawString(namespaces, buildContext));
         }
         return b.toString();
     }

@@ -7,20 +7,16 @@ options {
 start:  imports namespace? statements;
 
 imports
-    :   'import' fname=QUOTE LINE_END imports #importLE
-    |   'import' fname=QUOTE EOF #importFE
-    |   comment LINE_END imports #importCommentLE
-    |   comment EOF #importCommentFE
+    :   IMPORT_KEY fname=QUOTE LINE_END imports #importLE
+    |   IMPORT_KEY fname=QUOTE EOF #importFE
+    |   COMMENT LINE_END imports #importCommentLE
+    |   COMMENT EOF #importCommentFE
     |   LINE_END imports #importEmpty
-    | #importEnd
+    |   #importEnd
     ;
 
 namespace
-    :   'namespace' name=IDENT LINE_END
-    ;
-
-comment
-    :  '#' ~( '\r' | '\n' )*
+    :   NAMESPACE_KEY name=IDENT LINE_END
     ;
 
 statements
@@ -33,32 +29,32 @@ statements
 statement
     :   label_stmt
     |   capture_stmt
-    |   comment
+    |   COMMENT
     |   build_stmt
     |   test_stmt
     |   func_stmt
     ;
 
 label_stmt
-    :   'label' name=IDENT '=' val=term term_list
+    :   LABEL_KEY name=IDENT '=' val=term term_list
     ;
 
 capture_stmt
-    :   'capture' name=IDENT '=' term term_list
-    |   'capture[]' name=IDENT '=' term term_list
+    :   CAPTURE_KEY name=IDENT '=' term term_list #captureSingle
+    |   CAPTURE_KEY '[]' name=IDENT '=' term term_list #captureArray
     ;
 
 build_stmt
-    :   'build' name=IDENT '=' label=variable flags=CONSTANT*
+    :   BUILD_KEY name=IDENT '=' label=variable flags=CONSTANT*
     ;
 
 test_stmt
-    :   'test' build=variable input=QUOTE #testQuote
-    |   'test' build=variable input=CONSTANT #testConst
+    :   TEST_KEY build=variable input=QUOTE #testQuote
+    |   TEST_KEY build=variable input=CONSTANT #testConst
     ;
 
 func_stmt
-    :   'function' name=IDENT '(' params=param_list ')' '=' terms=term_list;
+    :   FUNCTION_KEY name=IDENT '(' params=param_list ')' '=' terms=term_list;
 
 term_list
     :   term term_list
@@ -103,16 +99,34 @@ param_list_tail
     |
     ;
 
+WS
+    :   [ \t\r]+ -> skip
+    ;
+
+COMMENT
+    :  '#' ~( '\r' | '\n' )*
+    ;
+
+LINE_END:  '\r'? '\n';
+
+LABEL_KEY: 'label';
+
+TEST_KEY: 'test';
+
+BUILD_KEY: 'build';
+
+CAPTURE_KEY: 'capture';
+
+FUNCTION_KEY: 'function';
+
+IMPORT_KEY: 'import';
+
+NAMESPACE_KEY: 'namespace';
+
 QUOTE: ['"] (~['"\\\r\n] | '\\' .)* ['"];
 
 IDENT: [a-zA-Z_$] [a-zA-Z0-9_$]*;
 
 NS_IDENT: IDENT '.' IDENT;
-
-WS
-    :   [ \t]+ -> skip
-    ;
-
-LINE_END:  '\n';
 
 CONSTANT: '@' [A-Z] [A-Z0-9_]*;

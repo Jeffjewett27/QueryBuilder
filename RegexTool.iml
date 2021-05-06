@@ -8,5 +8,6 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="antlr-runtime-4.9.1" level="project" />
+    <orderEntry type="library" name="named-regexp-0.2.5" level="project" />
   </component>
 </module>

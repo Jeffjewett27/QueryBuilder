@@ -21,14 +21,17 @@ public class FuncTerms extends Terms {
         return b.toString();
     }
 
-    public String getRawString(HashMap<String, SymbolTable> namespaces, List<Term> arguments) {
+    public String getRawString(HashMap<String, SymbolTable> namespaces, BuildContext buildContext, List<Term> arguments) {
+        if (parameters.size() != arguments.size()) {
+            System.out.println("Function was called with " + arguments.size() + " arguments, but required " + parameters.size());
+        }
         StringBuilder b = new StringBuilder();
         for (Term t : terms) {
             if (parameters.containsKey(t.id)) {
                 Term argterm = arguments.get(parameters.get(t.id));
-                b.append(argterm.getRawString(namespaces));
+                b.append(argterm.getRawString(namespaces, buildContext));
             } else {
-                b.append(t.getRawString(namespaces));
+                b.append(t.getRawString(namespaces, buildContext));
             }
         }
         return b.toString();

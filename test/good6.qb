@@ -1,6 +1,8 @@
-import 'test.qb'
+import 'good5.qb'
 namespace example
 
-label new = test.foo test.bar('a', 'b', func('c','d'))
-build out = test.prebuilt @GM
+function f(a) = a ex.baz
+capture x = ex.foo '*'
+label new = x ex.func(ex.func('c'))
+build out = new @GM
 test out @STDIN

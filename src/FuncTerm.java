@@ -28,8 +28,13 @@ public class FuncTerm extends Term {
 
     }
 
-    @Override public String getRawString(HashMap<String, SymbolTable> namespaces) {
-        FuncTerms terms = (FuncTerms)namespaces.get(namespace).variables.get(id);
-        return terms.getRawString(namespaces, arguments);
+    @Override public String getRawString(HashMap<String, SymbolTable> namespaces, BuildContext buildContext) {
+        Terms func = namespaces.get(namespace).variables.get(id);
+        if (!(func instanceof FuncTerms)) {
+            System.out.println("Attempted to call " + namespace + "." + id + " as a function");
+            System.exit(1);
+        }
+        FuncTerms terms = (FuncTerms)func;
+        return terms.getRawString(namespaces, buildContext, arguments);
     }
 }

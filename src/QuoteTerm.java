@@ -17,7 +17,7 @@ public class QuoteTerm extends Term {
 
     }
 
-    @Override public String getRawString(HashMap<String, SymbolTable> namespaces) {
+    @Override public String getRawString(HashMap<String, SymbolTable> namespaces, BuildContext buildContext) {
         return id;
     }
 }

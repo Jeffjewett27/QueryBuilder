@@ -1,4 +1,4 @@
-// Generated from /home/CS/users/oelliott/.linux/cos382/project/QueryBuilder/src/grammar/regexTool.g4 by ANTLR 4.9.1
+// Generated from C:/Users/jeffr/Documents/School/Language/RegexTool/src/grammar\regexTool.g4 by ANTLR 4.9.1
 package grammar;
 import org.antlr.v4.runtime.tree.ParseTreeVisitor;
 
@@ -65,12 +65,6 @@ public interface regexToolVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitNamespace(regexToolParser.NamespaceContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link regexToolParser#comment}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitComment(regexToolParser.CommentContext ctx);
-	/**
 	 * Visit a parse tree produced by {@link regexToolParser#statements}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
@@ -89,11 +83,19 @@ public interface regexToolVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitLabel_stmt(regexToolParser.Label_stmtContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link regexToolParser#capture_stmt}.
+	 * Visit a parse tree produced by the {@code captureSingle}
+	 * labeled alternative in {@link regexToolParser#capture_stmt}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitCapture_stmt(regexToolParser.Capture_stmtContext ctx);
+	T visitCaptureSingle(regexToolParser.CaptureSingleContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code captureArray}
+	 * labeled alternative in {@link regexToolParser#capture_stmt}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitCaptureArray(regexToolParser.CaptureArrayContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link regexToolParser#build_stmt}.
 	 * @param ctx the parse tree

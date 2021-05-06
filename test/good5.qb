@@ -1,1 +1,6 @@
-namespace emptyns
+namespace ex
+
+label baz = 'baz'
+label bar = 'bar'
+label foo = 'foo'
+function func(a) = a foo bar baz

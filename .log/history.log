@@ -635,13 +635,13 @@ CompilationStatus (AEW): 0 0 2
 [Ljava.lang.String;@2a23ef11
 --[ 2021.04.25.15.44.06.208.0 ]--
 UpdateTree (AD): 1 0
-+ /src/grammar/queryBuilderListener.java
++ /src/grammar/QueryBuilderListener.java
 
 --[ 2021.04.25.15.48.12.540.0 ]--
 CompilationStatus (AEW): 0 0 0
 --[ 2021.04.25.15.51.42.613.0 ]--
 UpdateTree (AD): 7 0
-+ /out/production/RegexTool/grammar/queryBuilderListener.class
++ /out/production/RegexTool/grammar/QueryBuilderListener.class
 + /src/QueryBuilder.java
 + /.git/objects/41/27aed84cf20f4980cf87c672ae87c3a5dd46ef
 + /.git/objects/4e/ab3dbfca7437173499338ccb65120c34106f48
@@ -669,8 +669,8 @@ CompilationStatus (AEW): 0 0 0
 CompilationStatus (AEW): 0 0 0
 --[ 2021.04.25.16.13.48.777.0 ]--
 UpdateTree (AD): 1 1
-- /src/grammar/queryBuilderListener.java
-+ /src/queryBuilderListener.java
+- /src/grammar/QueryBuilderListener.java
++ /src/QueryBuilderListener.java
 
 --[ 2021.04.25.16.14.20.037.0 ]--
 UpdateTree (AD): 1 0
@@ -686,7 +686,7 @@ UpdateTree (AD): 1 0
 
 --[ 2021.04.25.16.25.38.129.0 ]--
 UpdateTree (AD): 0 1
-- /out/production/RegexTool/grammar/queryBuilderListener.class
+- /out/production/RegexTool/grammar/QueryBuilderListener.class
 
 --[ 2021.04.25.16.25.38.132.0 ]--
 CompilationStatus (AEW): 0 0 2
@@ -699,7 +699,7 @@ UpdateTree (AD): 7 0
 + /out/production/RegexTool/Term.class
 + /out/production/RegexTool/Terms.class
 + /out/production/RegexTool/Term$Type.class
-+ /out/production/RegexTool/queryBuilderListener.class
++ /out/production/RegexTool/QueryBuilderListener.class
 
 --[ 2021.04.25.16.28.13.809.0 ]--
 CompilationStatus (AEW): 0 0 0
@@ -801,134 +801,134 @@ CompilationStatus (AEW): 0 0 0
 CompilationStatus (AEW): 0 0 0
 --[ 2021.04.25.18.47.14.903.0 ]--
 UpdateTree (AD): 0 1
-- /out/production/RegexTool/queryBuilderListener.class
+- /out/production/RegexTool/QueryBuilderListener.class
 
 --[ 2021.04.25.18.47.14.908.0 ]--
 CompilationStatus (AEW): 0 1 0
 [Ljava.lang.String;@7482c30a
 --[ 2021.04.25.18.47.19.619.0 ]--
 UpdateTree (AD): 1 1
-- /out/production/RegexTool/queryBuilderListener.class
-+ /out/production/RegexTool/queryBuilderListener.class
+- /out/production/RegexTool/QueryBuilderListener.class
++ /out/production/RegexTool/QueryBuilderListener.class
 
 --[ 2021.04.25.18.47.19.632.0 ]--
 UpdateTree (AD): 1 1
-- /out/production/RegexTool/queryBuilderListener.class
-+ /out/production/RegexTool/queryBuilderListener.class
+- /out/production/RegexTool/QueryBuilderListener.class
++ /out/production/RegexTool/QueryBuilderListener.class
 
 --[ 2021.04.25.18.47.19.694.0 ]--
 UpdateTree (AD): 1 1
-- /out/production/RegexTool/queryBuilderListener.class
-+ /out/production/RegexTool/queryBuilderListener.class
+- /out/production/RegexTool/QueryBuilderListener.class
++ /out/production/RegexTool/QueryBuilderListener.class
 
 --[ 2021.04.25.18.47.19.699.0 ]--
 UpdateTree (AD): 1 1
-- /out/production/RegexTool/queryBuilderListener.class
-+ /out/production/RegexTool/queryBuilderListener.class
+- /out/production/RegexTool/QueryBuilderListener.class
++ /out/production/RegexTool/QueryBuilderListener.class
 
 --[ 2021.04.25.18.47.19.812.0 ]--
 UpdateTree (AD): 1 1
-- /out/production/RegexTool/queryBuilderListener.class
-+ /out/production/RegexTool/queryBuilderListener.class
+- /out/production/RegexTool/QueryBuilderListener.class
++ /out/production/RegexTool/QueryBuilderListener.class
 
 --[ 2021.04.25.18.47.19.816.0 ]--
 UpdateTree (AD): 1 1
-- /out/production/RegexTool/queryBuilderListener.class
-+ /out/production/RegexTool/queryBuilderListener.class
+- /out/production/RegexTool/QueryBuilderListener.class
++ /out/production/RegexTool/QueryBuilderListener.class
 
 --[ 2021.04.25.18.47.19.973.0 ]--
 UpdateTree (AD): 1 1
-- /out/production/RegexTool/queryBuilderListener.class
-+ /out/production/RegexTool/queryBuilderListener.class
+- /out/production/RegexTool/QueryBuilderListener.class
++ /out/production/RegexTool/QueryBuilderListener.class
 
 --[ 2021.04.25.18.47.19.979.0 ]--
 UpdateTree (AD): 1 1
-- /out/production/RegexTool/queryBuilderListener.class
-+ /out/production/RegexTool/queryBuilderListener.class
+- /out/production/RegexTool/QueryBuilderListener.class
++ /out/production/RegexTool/QueryBuilderListener.class
 
 --[ 2021.04.25.18.47.20.034.0 ]--
 UpdateTree (AD): 1 1
-- /out/production/RegexTool/queryBuilderListener.class
-+ /out/production/RegexTool/queryBuilderListener.class
+- /out/production/RegexTool/QueryBuilderListener.class
++ /out/production/RegexTool/QueryBuilderListener.class
 
 --[ 2021.04.25.18.47.20.040.0 ]--
 UpdateTree (AD): 1 1
-- /out/production/RegexTool/queryBuilderListener.class
-+ /out/production/RegexTool/queryBuilderListener.class
+- /out/production/RegexTool/QueryBuilderListener.class
++ /out/production/RegexTool/QueryBuilderListener.class
 
 --[ 2021.04.25.18.47.20.217.0 ]--
 UpdateTree (AD): 1 1
-- /out/production/RegexTool/queryBuilderListener.class
-+ /out/production/RegexTool/queryBuilderListener.class
+- /out/production/RegexTool/QueryBuilderListener.class
++ /out/production/RegexTool/QueryBuilderListener.class
 
 --[ 2021.04.25.18.47.20.228.0 ]--
 UpdateTree (AD): 1 1
-- /out/production/RegexTool/queryBuilderListener.class
-+ /out/production/RegexTool/queryBuilderListener.class
+- /out/production/RegexTool/QueryBuilderListener.class
++ /out/production/RegexTool/QueryBuilderListener.class
 
 --[ 2021.04.25.18.47.21.128.0 ]--
 UpdateTree (AD): 1 1
-- /out/production/RegexTool/queryBuilderListener.class
-+ /out/production/RegexTool/queryBuilderListener.class
+- /out/production/RegexTool/QueryBuilderListener.class
++ /out/production/RegexTool/QueryBuilderListener.class
 
 --[ 2021.04.25.18.47.21.138.0 ]--
 UpdateTree (AD): 1 1
-- /out/production/RegexTool/queryBuilderListener.class
-+ /out/production/RegexTool/queryBuilderListener.class
+- /out/production/RegexTool/QueryBuilderListener.class
++ /out/production/RegexTool/QueryBuilderListener.class
 
 --[ 2021.04.25.18.47.21.313.0 ]--
 UpdateTree (AD): 1 1
-- /out/production/RegexTool/queryBuilderListener.class
-+ /out/production/RegexTool/queryBuilderListener.class
+- /out/production/RegexTool/QueryBuilderListener.class
++ /out/production/RegexTool/QueryBuilderListener.class
 
 --[ 2021.04.25.18.47.21.327.0 ]--
 UpdateTree (AD): 1 1
-- /out/production/RegexTool/queryBuilderListener.class
-+ /out/production/RegexTool/queryBuilderListener.class
+- /out/production/RegexTool/QueryBuilderListener.class
++ /out/production/RegexTool/QueryBuilderListener.class
 
 --[ 2021.04.25.18.47.21.455.0 ]--
 UpdateTree (AD): 1 1
-- /out/production/RegexTool/queryBuilderListener.class
-+ /out/production/RegexTool/queryBuilderListener.class
+- /out/production/RegexTool/QueryBuilderListener.class
++ /out/production/RegexTool/QueryBuilderListener.class
 
 --[ 2021.04.25.18.47.21.465.0 ]--
 UpdateTree (AD): 1 1
-- /out/production/RegexTool/queryBuilderListener.class
-+ /out/production/RegexTool/queryBuilderListener.class
+- /out/production/RegexTool/QueryBuilderListener.class
++ /out/production/RegexTool/QueryBuilderListener.class
 
 --[ 2021.04.25.18.47.21.785.0 ]--
 UpdateTree (AD): 1 1
-- /out/production/RegexTool/queryBuilderListener.class
-+ /out/production/RegexTool/queryBuilderListener.class
+- /out/production/RegexTool/QueryBuilderListener.class
++ /out/production/RegexTool/QueryBuilderListener.class
 
 --[ 2021.04.25.18.47.21.798.0 ]--
 UpdateTree (AD): 1 1
-- /out/production/RegexTool/queryBuilderListener.class
-+ /out/production/RegexTool/queryBuilderListener.class
+- /out/production/RegexTool/QueryBuilderListener.class
++ /out/production/RegexTool/QueryBuilderListener.class
 
 --[ 2021.04.25.18.47.22.081.0 ]--
 UpdateTree (AD): 1 1
-- /out/production/RegexTool/queryBuilderListener.class
-+ /out/production/RegexTool/queryBuilderListener.class
+- /out/production/RegexTool/QueryBuilderListener.class
++ /out/production/RegexTool/QueryBuilderListener.class
 
 --[ 2021.04.25.18.47.22.092.0 ]--
 UpdateTree (AD): 1 1
-- /out/production/RegexTool/queryBuilderListener.class
-+ /out/production/RegexTool/queryBuilderListener.class
+- /out/production/RegexTool/QueryBuilderListener.class
++ /out/production/RegexTool/QueryBuilderListener.class
 
 --[ 2021.04.25.18.47.22.167.0 ]--
 UpdateTree (AD): 1 1
-- /out/production/RegexTool/queryBuilderListener.class
-+ /out/production/RegexTool/queryBuilderListener.class
+- /out/production/RegexTool/QueryBuilderListener.class
++ /out/production/RegexTool/QueryBuilderListener.class
 
 --[ 2021.04.25.18.47.22.173.0 ]--
 UpdateTree (AD): 1 1
-- /out/production/RegexTool/queryBuilderListener.class
-+ /out/production/RegexTool/queryBuilderListener.class
+- /out/production/RegexTool/QueryBuilderListener.class
++ /out/production/RegexTool/QueryBuilderListener.class
 
 --[ 2021.04.25.18.47.25.344.0 ]--
 UpdateTree (AD): 1 0
-+ /out/production/RegexTool/queryBuilderListener.class
++ /out/production/RegexTool/QueryBuilderListener.class
 
 --[ 2021.04.25.18.47.25.348.0 ]--
 CompilationStatus (AEW): 0 0 0
@@ -1019,7 +1019,7 @@ InitTree:
 /out/production/RegexTool/FuncTerm.class
 /out/production/RegexTool/Term$Type.class
 /out/production/RegexTool/QueryBuilder.class
-/out/production/RegexTool/queryBuilderListener.class
+/out/production/RegexTool/QueryBuilderListener.class
 /src/grammar/regexTool.g4
 /src/grammar/regexTool.interp
 /src/grammar/regexTool.tokens
@@ -1036,7 +1036,7 @@ InitTree:
 /src/Terms.java
 /src/FuncTerm.java
 /src/QueryBuilder.java
-/src/queryBuilderListener.java
+/src/QueryBuilderListener.java
 /.git/info/exclude
 /.git/logs/refs/heads/master
 /.git/logs/refs/remotes/origin/HEAD

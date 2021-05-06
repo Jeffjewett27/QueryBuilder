@@ -1,4 +1,4 @@
-// Generated from /home/CS/users/oelliott/.linux/cos382/project/QueryBuilder/src/grammar/regexTool.g4 by ANTLR 4.9.1
+// Generated from C:/Users/jeffr/Documents/School/Language/RegexTool/src/grammar\regexTool.g4 by ANTLR 4.9.1
 package grammar;
 
 import org.antlr.v4.runtime.ParserRuleContext;
@@ -112,18 +112,6 @@ public class regexToolBaseListener implements regexToolListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterComment(regexToolParser.CommentContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitComment(regexToolParser.CommentContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
 	@Override public void enterStatements(regexToolParser.StatementsContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -160,13 +148,25 @@ public class regexToolBaseListener implements regexToolListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterCapture_stmt(regexToolParser.Capture_stmtContext ctx) { }
+	@Override public void enterCaptureSingle(regexToolParser.CaptureSingleContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitCapture_stmt(regexToolParser.Capture_stmtContext ctx) { }
+	@Override public void exitCaptureSingle(regexToolParser.CaptureSingleContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterCaptureArray(regexToolParser.CaptureArrayContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitCaptureArray(regexToolParser.CaptureArrayContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *

@@ -29,5 +29,5 @@ public abstract class Term {
 
     }
 
-    public abstract String getRawString(HashMap<String, SymbolTable> namespaces);
+    public abstract String getRawString(HashMap<String, SymbolTable> namespaces, BuildContext buildContext);
 }

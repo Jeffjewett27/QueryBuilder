@@ -1,4 +1,4 @@
-// Generated from /home/CS/users/oelliott/.linux/cos382/project/QueryBuilder/src/grammar/regexTool.g4 by ANTLR 4.9.1
+// Generated from C:/Users/jeffr/Documents/School/Language/RegexTool/src/grammar\regexTool.g4 by ANTLR 4.9.1
 package grammar;
 import org.antlr.v4.runtime.tree.ParseTreeListener;
 
@@ -100,16 +100,6 @@ public interface regexToolListener extends ParseTreeListener {
 	 */
 	void exitNamespace(regexToolParser.NamespaceContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link regexToolParser#comment}.
-	 * @param ctx the parse tree
-	 */
-	void enterComment(regexToolParser.CommentContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link regexToolParser#comment}.
-	 * @param ctx the parse tree
-	 */
-	void exitComment(regexToolParser.CommentContext ctx);
-	/**
 	 * Enter a parse tree produced by {@link regexToolParser#statements}.
 	 * @param ctx the parse tree
 	 */
@@ -140,15 +130,29 @@ public interface regexToolListener extends ParseTreeListener {
 	 */
 	void exitLabel_stmt(regexToolParser.Label_stmtContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link regexToolParser#capture_stmt}.
+	 * Enter a parse tree produced by the {@code captureSingle}
+	 * labeled alternative in {@link regexToolParser#capture_stmt}.
 	 * @param ctx the parse tree
 	 */
-	void enterCapture_stmt(regexToolParser.Capture_stmtContext ctx);
+	void enterCaptureSingle(regexToolParser.CaptureSingleContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link regexToolParser#capture_stmt}.
+	 * Exit a parse tree produced by the {@code captureSingle}
+	 * labeled alternative in {@link regexToolParser#capture_stmt}.
 	 * @param ctx the parse tree
 	 */
-	void exitCapture_stmt(regexToolParser.Capture_stmtContext ctx);
+	void exitCaptureSingle(regexToolParser.CaptureSingleContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code captureArray}
+	 * labeled alternative in {@link regexToolParser#capture_stmt}.
+	 * @param ctx the parse tree
+	 */
+	void enterCaptureArray(regexToolParser.CaptureArrayContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code captureArray}
+	 * labeled alternative in {@link regexToolParser#capture_stmt}.
+	 * @param ctx the parse tree
+	 */
+	void exitCaptureArray(regexToolParser.CaptureArrayContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link regexToolParser#build_stmt}.
 	 * @param ctx the parse tree

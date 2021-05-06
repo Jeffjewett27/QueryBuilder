@@ -1,7 +1,7 @@
 <component name="libraryTable">
-  <library name="antlr-runtime-4.9.1">
+  <library name="named-regexp-0.2.5">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/../antlr-runtime-4.9.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/named-regexp-0.2.5.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
