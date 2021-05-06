@@ -102,13 +102,13 @@ File 1: example.qb
 namespace example
 
 label capture firstname = "[a-zA-z]+"
-label capture[] lastname = "[a-zA-z]+"
+capture lastname = "[a-zA-z]+"
 label fullname = firstname "\s" lastname
 
 function fencepost(x,y) = x "(?>" y x ")*"
 label namelist = fencepost(fullname, ",\s")
 
-build [flags] output = namelist  #build regex form
+build output = namelist  #build regex form
 test output @STDIN
 test output 'inputfile.txt'
 ```
@@ -116,7 +116,7 @@ test output 'inputfile.txt'
 File 2: test.qb
 
 ```
-import previousfile.qb
+import "previousfile.qb"
 namespace test
 
 label capture[] email = "[\w\.]*@\w*.\w*"

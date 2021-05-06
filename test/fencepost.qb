@@ -2,8 +2,8 @@
 # (optional unless you import this file into a different file)
 namespace example
 
-capture firstname = "[a-zA-z]+"
-capture[] lastname = "[a-zA-z]+"
+capture firstname = "[a-zA-Z]+"
+capture[] lastname = "[a-zA-Z]+"
 label fullname = firstname "\s" lastname
 
 function fencepost(x,y) = x "(?>" y x ")*"

@@ -1,0 +1,223 @@
+
+<meta charset="utf-8" lang="en">
+
+**QueryBuilder**
+
+Please refer to this documentation when using the QueryBuilder language.
+
+
+<!--
+
+General
+========
+
+For each of your team's implementations, explain the following (where appropriate and applicable):
+
+- details on calling conventions, input and output data formats, limitations, bugs, and special features.
+- negative aspects of your program (limitations, known bugs)
+- positive aspects (extensions, special features)
+- describe your choice of modularization (abstractions), data structures, and algorithms
+- explain anything you did that is likely to be different from what other students may have done
+- justify any design decisions for which the rationale isn't immediately clear
+
+Feel free to modify the structure of this `readme.html` file to fit the current assignment and to fit how you wish to present your findings.
+
+
+Submission
+-----------
+
+
+Create a zip file that contains all of your code, this `readme.html` document, and any additional files of evidence (ex: screenshots).
+
+Use folders to divide up the subparts of your submission.
+For example, your zip file could look like the following:
+
+~~~~
+readme.html
+ada/
+primepartitions.adb
+screenshot.png
+go/
+primepartitions.go
+screenshot.png
+haskell/
+primepartitions.hs
+screenshot.png
+prolog/
+primepartitions.pl
+screenshot.png
+python/
+primepartitions.py
+screenshot.png
+~~~~
+-->
+
+Introduction
+================
+
+QueryBuilder is a DSL for composing and executing regex statements.
+
+Regex is confusing, so QueryBuilder seeks to simplify it and allow for testing.
+
+QueryBuilder is useful to write complex regex queries quickly.
+
+Keywords
+================
+
+label
+-----------
+
+`label` is a type given to variables that store valid regex.
+
+Examples: `label word = "[a-zA-Z]+"` `label twoWords = word "\s" word`
+
+namespace
+-----------
+
+`namespace` is a name given to the file which is used to reference the labels and funcitons in this file if it is imported into another file.
+
+`namespace` is technically optional, but if you try and import a file with no declared namespace then there will be no way to access the labels and
+functions in the imported file.
+
+`namespace` must go after any import statements but before any other statements.
+
+Example: `namespace test`
+
+import
+-----------
+
+`import` is a way to include other files when using QueryBuilder.
+
+See the above section for `namespace` on how to reference an imported file.
+
+`import` statements must go before any other statements.
+
+`import` will throw an error if the filename after it is invalid.
+
+Example: `import "test.qb"`
+
+function
+-----------
+
+`function` is used to define a regex pattern that should be applied to the given parameters.
+
+`function` parameters should not be empty. Use labels instead.
+
+Examples: `function makeList(a) = a "(?> ,\s?" a ")*"` `function repeat3(a,b,c) = a b c`
+
+capture
+-----------
+
+`capture` is used in place of `label` when you want a certain label to always be captured.
+
+`capture` automatically adds a named cpature group to the stored expression (the variable name is used for this name).
+
+Example: `capture fullName = firstName "\s" lastName`
+
+build
+-----------
+
+`build` generates a full regex expression given a label or capture group.
+
+Use in combination with `test` to see the output of the built expression.
+
+Example: `build output = fullName`
+
+test
+-----------
+
+`test` will test the given built expression against the given input.
+
+The first parameter after `test` should be any built expression.
+
+The second parameter should be either a text file to read input from or `@STDIN` to read from standard input instead.
+
+Examples: `test output @STDIN` `test output inputFile.txt`
+
+Comments
+================
+
+Using a # character at the start of a line will cause that line to be a comment.
+
+Comments are purely for the user, as the complier will ignore any line starting with a # character.
+
+Examples
+================
+
+File 1: fullnameList.qb
+
+```
+namespace fn
+
+label firstname = "[a-zA-z]+"
+capture lastname = "[a-zA-z]+"
+label fullname = firstname "\s" lastname
+
+function fencepost(x,y) = x "(?>" y x ")*"
+label namelist = fencepost(fullname, ",\s")
+
+build output = namelist  #build regex form
+```
+
+File 2: mailingList.qb
+
+```
+import "fullnameList.qb"
+namespace test
+
+label capture[] email = "[\w\.]*@\w*.\w*"
+label emailList = fn.fencepost(email, ",\s")
+build output = emailList
+
+test fn.output @STDIN
+test output 'mailingList.txt'
+```
+
+!(Output of mailingList.qb)[output.png]
+
+<!--   Feel free to modify the following to fit a theme of your choosing   -->
+<link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet"> <!-- a sans-serif font -->
+<style>  /* A TAYLOR-INSPIRED THEME */
+body {font-family:'Open Sans',sans-serif;}
+.md a:link, .md a:visited {color:hsl(252,23.0%,44.3%); font-family:'Open Sans',sans-serif;}
+.md table.table th {background-color:hsl(252,23.0%,44.3%);}
+.md .noheader th {display:none;}
+.md .firstcol td:first-child {white-space:pre;color:white;vertical-align:top;font-weight:bold;border-color:black;background:hsl(252,23.0%,54.3%);}
+.md .firstcol tr:nth-child(even) td:first-child {background:hsl(252,23.0%,44.3%);}
+</style>
+
+
+<!-- ****************************** -->
+<!--    Leave the content below     -->
+<!-- ****************************** -->
+
+<!-- The script and style below are added for clarity and to workaround a bug -->
+<script>
+// this is a hack to workaround a bug in Markdeep+Mathjax, where
+// `&#36;`` is automatically converted to `\(`` and `\)`` too soon.
+// the following code will replace the innerHTML of all elements
+// with class "dollar" with a dollar sign.
+setTimeout(function() {
+var dollars = document.getElementsByClassName('dollar');
+for(var i = 0; i < dollars.length; i++) {
+dollars[i].innerHTML = '&#' + '36;'; // split to prevent conversion to $
+}
+}, 1000);
+</script>
+<style>
+/* adding some styling to <code> tags (but not <pre><code> coding blocks!) */
+:not(pre) > code {
+background-color: rgba(0,0,0,0.05);
+outline: 1px solid rgba(0,0,0,0.15);
+margin-left: 0.25em;
+margin-right: 0.25em;
+}
+/* fixes table of contents of medium-length document from looking weird if admonitions are behind */
+.md div.mediumTOC { background: white; }
+.md div.admonition { position: initial !important; }
+</style>
+
+<!--   Leave the following Markdeep formatting code, as this will format your text above to look nice in a wed browser   -->
+<style class="fallback">body{visibility:hidden;white-space:pre;font-family:monospace}</style>
+<script src="https://casual-effects.com/markdeep/latest/markdeep.min.js"></script>
+<script>window.alreadyProcessedMarkdeep||(document.body.style.visibility="visible");</script>

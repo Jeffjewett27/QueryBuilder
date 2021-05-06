@@ -1,0 +1,9 @@
+import "fullnameList.qb"
+namespace test
+
+label capture[] email = "[\w\.]*@\w*.\w*"
+label emailList = fn.fencepost(email, ",\s")
+build output = emailList
+
+test fn.output @STDIN
+test output 'mailingList.txt'
