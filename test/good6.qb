@@ -2,7 +2,11 @@ import 'good5.qb'
 namespace example
 
 function f(a) = a ex.baz
-capture x = ex.foo '*'
+capture[] x = ex.foo '+'
+capture wat = 'wat'
 label new = x ex.func(ex.func('c'))
-build out = new @GM
-test out @STDIN
+label t2 = x ',' x ';'
+label t3 = wat x x
+build out = t2 @GM
+build out2 = t3
+test out2 @STDIN 'output.json'

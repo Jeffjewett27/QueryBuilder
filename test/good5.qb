@@ -2,5 +2,7 @@ namespace ex
 
 label baz = 'baz'
 label bar = 'bar'
-label foo = 'foo'
+capture[] foo = 'foo'
 function func(a) = a foo bar baz
+
+build tst = foo
