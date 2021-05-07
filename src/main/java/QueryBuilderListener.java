@@ -222,14 +222,17 @@ public class QueryBuilderListener extends regexToolBaseListener {
     }
 
     @Override public void exitTestQuote(regexToolParser.TestQuoteContext ctx) {
-        String filename = stripQuotes(ctx.input.getText());
+        String inputfname = ctx.input.getText();
         String buildname = ctx.build.getText();
         var parts = splitIdentifier(buildname);
         String namespace = parts[0];
         buildname = parts[1];
         String output = ctx.output.getText();
 
-        String newpathstr = null;
+        String absInput = getAbsolutePath(inputfname);
+        String absOutput = getAbsolutePath(output);
+
+        /*String newpathstr = null;
         if (output.length() > 0) {
             Path newpath = Paths.get(stripQuotes(output));
             newpath = path.getParent().resolve(newpath);
@@ -238,21 +241,21 @@ public class QueryBuilderListener extends regexToolBaseListener {
                 System.exit(1);
             }
             newpathstr = newpath.toAbsolutePath().toString();
-        }
+        }*/
 
         BufferedReader reader = null;
         String input = null;
         try {
-            FileInputStream stream = new FileInputStream(filename);
+            FileInputStream stream = new FileInputStream(absInput);
             reader = new BufferedReader(new InputStreamReader(stream));
             input = reader.lines().collect(Collectors.joining());
         } catch (Exception e){
-            System.out.println("Could not open file " + filename);
+            System.out.println("Could not open file " + inputfname);
             e.printStackTrace();
             System.exit(1);
         }
         BuildContext context = namespaces.get(namespace).buildContexts.get(buildname);
-        Tester tester = new Tester(namespaces, namespaces.get(namespace), input, newpathstr, context);
+        Tester tester = new Tester(namespaces, namespaces.get(namespace), input, output, context);
     }
 
     @Override public void exitTestConst(regexToolParser.TestConstContext ctx) {
@@ -267,7 +270,8 @@ public class QueryBuilderListener extends regexToolBaseListener {
         String build = namespaces.get(namespace).builds.get(buildname);
         String output = ctx.output.getText();
 
-        String newpathstr = null;
+        String absOutput = getAbsolutePath(output);
+        /*String newpathstr = null;
         if (output.length() > 0) {
             Path newpath = Paths.get(stripQuotes(output));
             newpath = path.getParent().resolve(newpath);
@@ -276,7 +280,7 @@ public class QueryBuilderListener extends regexToolBaseListener {
                 System.exit(1);
             }
             newpathstr = newpath.toAbsolutePath().toString();
-        }
+        }*/
 
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -294,6 +298,20 @@ public class QueryBuilderListener extends regexToolBaseListener {
             System.out.println("Could not execute test without a recognized build: " + buildname);
             System.exit(1);
         }
-        Tester tester = new Tester(namespaces, namespaces.get(namespace), input, newpathstr, context);
+        Tester tester = new Tester(namespaces, namespaces.get(namespace), input, absOutput, context);
+    }
+
+    public String getAbsolutePath(String relative) {
+        String newpathstr = null;
+        if (relative.length() > 0) {
+            Path newpath = Paths.get(stripQuotes(relative));
+            newpath = path.getParent().resolve(newpath);
+            if (path.equals(newpath)) {
+                System.out.println("Cannot import self-referential files");
+                System.exit(1);
+            }
+            newpathstr = newpath.toAbsolutePath().toString();
+        }
+        return newpathstr;
     }
 }

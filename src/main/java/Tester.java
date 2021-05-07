@@ -71,7 +71,7 @@ public class Tester {
                     }
                     var cident = buildContext.getCaptureIdent(skey, ckey);
                     var ccount = buildContext.captureCounts.get(cident);
-                    if (ccount == 0) {
+                    if (ccount == null || ccount == 0) {
                         continue;
                     }
                     String nsident = skey + "." + ckey;
@@ -99,6 +99,7 @@ public class Tester {
             jsonroot.add(mapobject);
             idx++;
         }
+        System.out.println();
         return jsonroot;
     }
 

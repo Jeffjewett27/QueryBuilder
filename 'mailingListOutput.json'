@@ -1,0 +1,1 @@
+[{"fn":{"values":{},"namespace":"fn","match":"test@example.com, coolguy123@gmail.com, dantheman@taco.net, catlover1@aol.com, "},"mailingList":{"values":{"email":["test@example.com","coolguy123@gmail.com","dantheman@taco.net","catlover1@aol.com"]},"namespace":"mailingList","match":"test@example.com, coolguy123@gmail.com, dantheman@taco.net, catlover1@aol.com, "}}]
