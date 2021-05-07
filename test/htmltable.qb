@@ -1,4 +1,4 @@
-namespace wikitable
+namespace htmltable
 
 label notbrackets = '[^<>]'
 label spacebetween = notbrackets '*'
@@ -13,7 +13,7 @@ label thpair = openth thval closeth
 
 label opentd = opentag('t[dh]')
 label closetd = closetag('t[dh]')
-capture[] tdval = notbrackets '*'
+capture[] tdval = '.*?'
 label tdpair = opentd tdval closetd
 
 label opentr = opentag('tr')
@@ -26,20 +26,5 @@ label tdpairspace = tdpair spacebetween
 label trd6inner = spacebetween dup6(tdpairspace) spacebetween
 label trdpair = opentr trd6inner closetr
 
-label openthead = opentag('thead')
-label closethead = closetag('thead')
-label opentbody = opentag('tbody')
-label closetbody = closetag('tbody')
-label theadpair = openthead spacebetween trhpair spacebetween closethead
-
-
-label opentable = opentag('table')
-label closetable = closetag('table')
-
-
-label tablepair = opentable '.*' trhpair '.*' trdpair '.*' closetable
-label find = trhpair spacebetween trdpair spacebetween trdpair spacebetween trdpair spacebetween trdpair
-
-build open = theadpair
-test open @STDIN
-test open 'worldseries.html'
+build open = trdpair
+test open 'htmltable.html'
