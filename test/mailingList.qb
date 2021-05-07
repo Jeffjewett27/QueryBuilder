@@ -1,5 +1,5 @@
 import "fullnameList.qb"
-namespace test
+namespace mailingList
 
 capture[] email = "[\w\.]*@\w*.\w*"
 label emailList = fn.fencepost(email, ",\s")
