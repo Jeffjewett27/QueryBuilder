@@ -7,4 +7,4 @@ capture fullname = firstname "\s" lastname
 function fencepost(x,y) = x "(?>" y x ")*"
 label namelist = fencepost(fullname, ",\s")
 
-build output = namelist  #build regex form
+build output = namelist
