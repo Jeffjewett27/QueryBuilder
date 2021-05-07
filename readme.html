@@ -63,7 +63,7 @@ Authors
 ------------------|-------------
 names             | Owen Elliott / Jeff Jewett
 computer + OS     | cse21703 (Ubuntu)
-time to complete  | 14 hours
+time to complete  | 30 hours
 </div>
 
 
@@ -347,7 +347,133 @@ build out = ftest
 
 ![Result (imports)](result3.png)
 
+Non Trivial Examples
+=====================
 
+IPv6 Address Matcher
+----------------------
+
+This code uses a combination of labels and a function to generate a long regex query that matches
+all forms of IPv6 addresses.
+
+```
+namespace ipv6
+
+label addrChunk1to4 = '(?>[0-9a-fA-F]{1,4}:)'
+function setCountChanger(num1,num2) = addrChunk1to4 '{1,' num1 '}' '(?>:[0-9a-fA-F]{1,4}){1,' num2 '}'
+
+# IPv6 Address Type 1 (1-4 chars per set) (8 sets)
+# Example: 2001:db8:85a3:0000:0000:8a2e:370:7334
+
+capture addrType1 = addrChunk1to4 '{7,7}' '[0-9a-fA-F]{1,4}'
+
+# IPv6 Address Type 2 (1-4 chars per set) (1-7 sets :: 0 sets)
+# Example: fe42:26a1:370:507::
+
+capture addrType2 = addrChunk1to4 '{1,7}:'
+
+# IPv6 Address Type 3 (1-4 chars per set) (1-6 sets :: 1 set)
+# Example: ff06:1d09:1344:cfc2:31::c33d:1313
+
+capture addrType3 = setCountChanger('6','1')
+
+# IPv6 Address Type 4 (1-4 chars per set) (1-5 sets :: 1-2 sets)
+# Example: ff06:1d09:1344:cfc2:31::c33d:1313
+
+capture addrType4 = setCountChanger('5','2')
+
+# IPv6 Address Type 5 (1-4 chars per set) (1-4 sets :: 1-3 sets)
+# Example: ff06:1d09:1344:cfc2::31:c33d:1313
+
+capture addrType5 = setCountChanger('4','3')
+
+# IPv6 Address Type 6 (1-4 chars per set) (1-3 sets :: 1-4 sets)
+# Example: ff06:1d09:1344::cfc2:31:c33d:1313
+
+capture addrType6 = setCountChanger('3','4')
+
+# IPv6 Address Type 7 (1-4 chars per set) (1-2 sets :: 1-5 sets)
+# Example: ff06:1d09::1344:cfc2:31:c33d:1313
+
+capture addrType7 = setCountChanger('2','4')
+
+# IPv6 Address Type 8 (1-4 chars per set) (1 set :: 1-6 sets)
+# Example: ff06::1d09:1344:cfc2:31:c33d:1313
+
+capture addrType8 = setCountChanger('1','6')
+
+# IPv6 Address Type 9 (1-4 chars per set) (0 sets :: 0-7 sets)
+# Example: ::3e13:1335
+
+capture addrType9 = ':((:[0-9a-fA-F]{1,4}){1,7}|:)'
+
+# build and test
+
+label ipv6addr = addrType1 '|' addrType2 '|' addrType3 '|' addrType4 '|' addrType5 '|' addrType6 '|' addrType7 '|' addrType8 '|' addrType9
+
+build query = ipv6addr
+test query "ipv6.txt"
+test query "badIPV6data.txt"
+```
+![IPv6 Address Matcher](ipv6.png)
+
+HTML Table Query
+----------------------
+
+This code takes an html page as an input and matches the data in any tables on that page (including rows and cols).
+
+```
+namespace htmltable
+
+label notbrackets = '[^<>]'
+label spacebetween = notbrackets '*'
+function dup6(a) = a a a a a a
+function opentag(type) = '<' type spacebetween '>'
+function closetag(type) = '</' type notbrackets '*>'
+
+label openth = opentag('th')
+label closeth = closetag('th')
+capture[] thval = notbrackets '*'
+label thpair = openth thval closeth
+
+label opentd = opentag('t[dh]')
+label closetd = closetag('t[dh]')
+capture[] tdval = '.*?'
+label tdpair = opentd tdval closetd
+
+label opentr = opentag('tr')
+label closetr = closetag('tr')
+label thpairspace = thpair spacebetween
+label trh6inner = spacebetween dup6(thpairspace) spacebetween
+label trhpair = opentr trh6inner closetr
+
+label tdpairspace = tdpair spacebetween
+label trd6inner = spacebetween dup6(tdpairspace) spacebetween
+label trdpair = opentr trd6inner closetr
+
+build open = trdpair
+test open 'htmltable.html'
+```
+![HTML Table](wikitableoutput.png)
+
+Conclusions
+=================
+
+QueryBuilder is a pretty useful tool when trying to conceptualize and build complex queries.
+Compared to doing regex by hand, our DSL is vastly superior. For example, `ipv6.qb` generates a *very* complex
+query that is essentially a list of possible forms for IPv6 address. Using the function I declared at the start, however,
+I was able to create this massive query in less than 20 lines of code (comments not included). In addition, our `test` functionality
+can optionally output the results to a .json file for convenience. These features are what makes QueryBuilder a more useful tool
+than a generalized language.
+
+![JSON example](json.png)
+
+In our opinion, the code looks very clean and readable, which can help someone who comes accross the code to understand it,
+even if they dont know what this means:
+```
+(?<ipv6addrType1>(?>[0-9a-fA-F]{1,4}:){7,7}[0-9a-fA-F]{1,4})|(?<ipv6addrType2>(?>[0-9a-fA-F]{1,4}:){1,7}:)|(?<ipv6addrType3>(?>[0-9a-fA-F]{1,4}:){1,6}(?>:[0-9a-fA-F]{1,4}){1,1})|(?<ipv6addrType4>(?>[0-9a-fA-F]{1,4}:){1,5}(?>:[0-9a-fA-F]{1,4}){1,2})|(?<ipv6addrType5>(?>[0-9a-fA-F]{1,4}:){1,4}(?>:[0-9a-fA-F]{1,4}){1,3})|(?<ipv6addrType6>(?>[0-9a-fA-F]{1,4}:){1,3}(?>:[0-9a-fA-F]{1,4}){1,4})|(?<ipv6addrType7>(?>[0-9a-fA-F]{1,4}:){1,2}(?>:[0-9a-fA-F]{1,4}){1,4})|(?<ipv6addrType8>(?>[0-9a-fA-F]{1,4}:){1,1}(?>:[0-9a-fA-F]{1,4}){1,6})|(?<ipv6addrType9>:((:[0-9a-fA-F]{1,4}){1,7}|:))
+```
+We took about equal responsibilty for this project, although Jeff did more coding while Owen did more documenting.
 
 <!--   Feel free to modify the following to fit a theme of your choosing   -->
 <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet"> <!-- a sans-serif font -->
