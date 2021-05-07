@@ -1,0 +1,11 @@
+Valid Examples:
+
+2001:db8:85a3:5c:b:8a2e:370:7334
+1050:0:0:0:5:600:300c:326b
+ff06::c3
+
+Invalid Examples:
+
+192.168.1.1
+word:word:word:word:word:word:word:word
+a7v9e90b1568a5e3ba300189
