@@ -123,7 +123,7 @@ build
 
 Use in combination with `test` to see the output of the built expression.
 
-Example: `build output = fullName`
+Example: `build output = fullName `
 
 test
 -----------
@@ -134,7 +134,9 @@ The first parameter after `test` should be any built expression.
 
 The second parameter should be either a text file to read input from or `@STDIN` to read from standard input instead.
 
-Examples: `test output @STDIN` `test output inputFile.txt`
+The third parameter is optional, and it is the name of a file to save the json output to.
+
+Examples: `test output @STDIN` `test output 'inputFile.txt' 'output.json'`
 
 Comments
 ================
@@ -172,7 +174,7 @@ label emailList = fn.fencepost(email, ",\s")
 build output = emailList
 
 test fn.output @STDIN
-test output 'mailingList.txt'
+test output 'mailingList.txt' 'mailingListOuptut.json'
 ```
 
 !(Output of mailingList.qb)[output.png]

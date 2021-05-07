@@ -6,4 +6,4 @@ label emailList = fn.fencepost(email, ",\s")
 build output = emailList
 
 test fn.output @STDIN
-test output 'mailingList.txt'
+test output 'mailingList.txt' 'mailingListOutput.json'
