@@ -51,6 +51,10 @@ capture addrType9 = ':((:[0-9a-fA-F]{1,4}){1,7}|:)'
 # build and test
 
 label ipv6addr = addrType1 '|' addrType2 '|' addrType3 '|' addrType4 '|' addrType5 '|' addrType6 '|' addrType7 '|' addrType8 '|' addrType9
+
+capture testCap = addrType1
+label test1 = testCap
+
 build query = ipv6addr
-test query 'ipv6.txt'
+test query "ipv6.txt"
 
