@@ -1,3 +1,45 @@
 namespace wikitable
 
-l
+label notbrackets = '[^<>]'
+label spacebetween = notbrackets '*'
+function dup6(a) = a a a a a a
+function opentag(type) = '<' type spacebetween '>'
+function closetag(type) = '</' type notbrackets '*>'
+
+label openth = opentag('th')
+label closeth = closetag('th')
+capture[] thval = notbrackets '*'
+label thpair = openth thval closeth
+
+label opentd = opentag('t[dh]')
+label closetd = closetag('t[dh]')
+capture[] tdval = notbrackets '*'
+label tdpair = opentd tdval closetd
+
+label opentr = opentag('tr')
+label closetr = closetag('tr')
+label thpairspace = thpair spacebetween
+label trh6inner = spacebetween dup6(thpairspace) spacebetween
+label trhpair = opentr trh6inner closetr
+
+label tdpairspace = tdpair spacebetween
+label trd6inner = spacebetween dup6(tdpairspace) spacebetween
+label trdpair = opentr trd6inner closetr
+
+label openthead = opentag('thead')
+label closethead = closetag('thead')
+label opentbody = opentag('tbody')
+label closetbody = closetag('tbody')
+label theadpair = openthead spacebetween trhpair spacebetween closethead
+
+
+label opentable = opentag('table')
+label closetable = closetag('table')
+
+
+label tablepair = opentable '.*' trhpair '.*' trdpair '.*' closetable
+label find = trhpair spacebetween trdpair spacebetween trdpair spacebetween trdpair spacebetween trdpair
+
+build open = theadpair
+test open @STDIN
+test open 'worldseries.html'

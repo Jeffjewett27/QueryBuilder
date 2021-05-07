@@ -37,6 +37,10 @@ public class VarTerm extends Term {
     @Override public String getRawString(HashMap<String, SymbolTable> namespaces, BuildContext buildContext) {
         SymbolTable ns = namespaces.get(namespace);
         Terms terms = ns.variables.get(id);
+        if (terms == null) {
+            System.out.println("Attempted use of undefined variable: " + namespace + "." + id);
+            System.exit(1);
+        }
         String prefix = "";
         String suffix = "";
         if (captureType != CaptureType.None) {

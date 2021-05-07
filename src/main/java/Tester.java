@@ -37,16 +37,15 @@ public class Tester {
         Pattern pattern = Pattern.compile(build);
         Matcher matcher = pattern.matcher(input);
 
+        System.out.println("Showing matches for query: " + build);
         List<Map<String,String>> namedGroups = null;
         if (namespace.captured.size() > 0) {
             namedGroups = matcher.namedGroups();
         }
         int count = 0;
-        System.out.println("Showing matches for query: " + build);
         List<String> matches = new ArrayList<>();
         while (matcher.find()) {
             matches.add(matcher.group());
-            System.out.println("Match " + count + ": " + matcher.group(0));
             count++;
         }
         json = getCapturesJSON(namedGroups, matches);
@@ -55,6 +54,14 @@ public class Tester {
     public JSONArray getCapturesJSON(List<Map<String,String>> maps, List<String> matches) {
         var jsonroot = new JSONArray();
         int idx = 0;
+        if (maps == null) {
+            maps = new ArrayList<>();
+            maps.add(new HashMap<>());
+        }
+        if (matches.size() == 0) {
+            System.out.println("Nothing matched");
+            return jsonroot;
+        }
         for (var map : maps) {
             var mapobject = new JSONObject();
             for (var skey : namespaces.keySet()) {
@@ -62,7 +69,9 @@ public class Tester {
                 SymbolTable ns = namespaces.get(skey);
                 symobject.put("namespace", skey);
                 var symvals = new JSONObject();
-                symobject.put("match", matches.get(idx));
+                String match = matches.get(idx);
+                System.out.println("Match " + idx + ": " + match);
+                symobject.put("match", match);
                 symobject.put("values", symvals);
                 for (var ckey : ns.captured.keySet()) {
                     var cval = ns.captured.get(ckey);
